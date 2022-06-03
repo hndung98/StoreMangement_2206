@@ -1,0 +1,50 @@
+Table Employee -> Remove PositionID
+All IDs have 5 char
+All prices have decimal(12,0)
+All addresses have varchar(50)
+Convention: Gender, WorkingStatus (Employee)
+All numbers have varchar(15)
+All emails have varchar(40)
+Table SalesDetails -> Remove SalesDetailsID
+Table InputDetails -> Remove InputDetailsID
+Table CancelDetails -> Remove CancelDetailsID
+Address -> FullAddress
+Status -> CurrentStatus
+All names have varchar(40)
+
+Admin:
+- Create, modify, delete Items
+- Create, modify, delete employee info
+- View revenue of entire system or a particular store
+- Modify info of Suppliers, Shippers
+
+Manager
+- Get Items CREATED to store, only can change prices
+- Create Customer info
+- Add sales, input, cancel bills
+- Create, modify employee info
+- Add vouchers
+- View employees' salary
+- View store revenue
+- Add shippers
+
+Employee
+- Add sales, input bills
+- Add customers info
+
+Constraints:
+- An Item must have a supplier
+- A store must have a manager
+- A bills must only include 1 voucher, in voucher, discount
+rate must not exceed 50%, and Ending date must be after Starting Date
+- Store Closing Date (if any) must be after Opening Date
+- An inventory must be possesed by a store, and only contains store item
+of that store
+- In a store, Manager salary must be higher than employee salary
+
+
++ ID tự động => Primary key
++ Thay varchar bằng nvarchar
++ Foreign key chỉ reference đến unique field
+
+
