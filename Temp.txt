@@ -1,0 +1,8 @@
+USE [StoreManagement]
+GO
+
+INSERT INTO StoreManagement..Store
+VALUES (N'Lẩu dê', 123456, N'abc@gmail.com', 1, 20000,'2022-04-01', null, N'', N'', N'', N'')
+
+GO
+
