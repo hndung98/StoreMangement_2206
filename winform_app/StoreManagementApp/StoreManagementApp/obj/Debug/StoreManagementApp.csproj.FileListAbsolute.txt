@@ -1,0 +1,9 @@
+D:\BKU\HK212\DB\Git\StoreMangement_2206\winform_app\StoreManagementApp\StoreManagementApp\bin\Debug\StoreManagementApp.exe.config
+D:\BKU\HK212\DB\Git\StoreMangement_2206\winform_app\StoreManagementApp\StoreManagementApp\bin\Debug\StoreManagementApp.exe
+D:\BKU\HK212\DB\Git\StoreMangement_2206\winform_app\StoreManagementApp\StoreManagementApp\bin\Debug\StoreManagementApp.pdb
+D:\BKU\HK212\DB\Git\StoreMangement_2206\winform_app\StoreManagementApp\StoreManagementApp\obj\Debug\StoreManagementApp.csprojResolveAssemblyReference.cache
+D:\BKU\HK212\DB\Git\StoreMangement_2206\winform_app\StoreManagementApp\StoreManagementApp\obj\Debug\StoreManagementApp.MainScreen.resources
+D:\BKU\HK212\DB\Git\StoreMangement_2206\winform_app\StoreManagementApp\StoreManagementApp\obj\Debug\StoreManagementApp.Properties.Resources.resources
+D:\BKU\HK212\DB\Git\StoreMangement_2206\winform_app\StoreManagementApp\StoreManagementApp\obj\Debug\StoreManagementApp.csproj.GenerateResource.Cache
+D:\BKU\HK212\DB\Git\StoreMangement_2206\winform_app\StoreManagementApp\StoreManagementApp\obj\Debug\StoreManagementApp.exe
+D:\BKU\HK212\DB\Git\StoreMangement_2206\winform_app\StoreManagementApp\StoreManagementApp\obj\Debug\StoreManagementApp.pdb
