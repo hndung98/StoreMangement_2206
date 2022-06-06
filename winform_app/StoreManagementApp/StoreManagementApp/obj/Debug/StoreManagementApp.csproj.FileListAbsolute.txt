@@ -7,3 +7,4 @@ D:\BKU\HK212\DB\Git\StoreMangement_2206\winform_app\StoreManagementApp\StoreMana
 D:\BKU\HK212\DB\Git\StoreMangement_2206\winform_app\StoreManagementApp\StoreManagementApp\obj\Debug\StoreManagementApp.csproj.GenerateResource.Cache
 D:\BKU\HK212\DB\Git\StoreMangement_2206\winform_app\StoreManagementApp\StoreManagementApp\obj\Debug\StoreManagementApp.exe
 D:\BKU\HK212\DB\Git\StoreMangement_2206\winform_app\StoreManagementApp\StoreManagementApp\obj\Debug\StoreManagementApp.pdb
+D:\BKU\HK212\DB\Git\StoreMangement_2206\winform_app\StoreManagementApp\StoreManagementApp\obj\Debug\StoreManagementApp.Dialog.Store.resources

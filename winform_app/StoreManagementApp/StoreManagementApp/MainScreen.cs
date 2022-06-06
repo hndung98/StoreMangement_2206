@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StoreManagementApp.Dialog;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -74,6 +75,62 @@ namespace StoreManagementApp
             DataTable dt = PullData(query);
 
             dgvItemInquiry.DataSource = dt;
+        }
+
+        private void btnAddStore_Click(object sender, EventArgs e)
+        {
+            using (Store dialog = new Store())
+            {
+                var managerList = new List<string>();
+                managerList.Add("HN Dung - 1");
+                managerList.Add("HN Hung - 5");
+                managerList.Add("HN Phat - 12");
+
+                dialog.StoreName = "Quan An 1";
+                dialog.PhoneNumber = "035 241 2123";
+                dialog.RentalCost = "10,000,000";
+                dialog.managerList = managerList;
+                dialog.setInfo();
+
+                dialog.ShowDialog();
+                var res = dialog.DialogResult;
+                if (res == DialogResult.OK)
+                {
+                    MessageBox.Show(dialog.StoreName + dialog.PhoneNumber + dialog.RentalCost);
+                }
+                else if (res == DialogResult.Cancel)
+                {
+                    MessageBox.Show("Cancel");
+                }
+            }
+        }
+
+        private void btnEditStore_Click(object sender, EventArgs e)
+        {
+            using (Store dialog = new Store())
+            {
+                var managerList = new List<string>();
+                managerList.Add("HN Dung - 1");
+                managerList.Add("HN Hung - 5");
+                managerList.Add("HN Phat - 12");
+
+                dialog.StoreName = "Quan An 1";
+                dialog.PhoneNumber = "035 241 2123";
+                dialog.RentalCost = "10,000,000";
+                dialog.managerList = managerList;
+                dialog.setInfo();
+
+                dialog.ShowDialog();
+                var res = dialog.DialogResult;
+                if (res == DialogResult.OK)
+                {
+                    MessageBox.Show(dialog.StoreName + dialog.PhoneNumber + dialog.RentalCost);
+                }
+                else if (res == DialogResult.Cancel)
+                {
+                    MessageBox.Show("Cancel");
+                }
+            }
         }
     }
 }
