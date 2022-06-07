@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StoreManagementApp.Dialog
 {
-    public partial class Customer : Form
+    public partial class StoreItem : Form
     {
-        public Customer()
+        public StoreItem()
         {
             InitializeComponent();
         }

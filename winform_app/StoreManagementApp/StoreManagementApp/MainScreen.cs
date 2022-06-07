@@ -132,5 +132,25 @@ namespace StoreManagementApp
                 }
             }
         }
+
+        private void btnAddEmployee_Click(object sender, EventArgs e)
+        {
+            using (Employee dialog = new Employee())
+            {
+                var storeList = new List<string>();
+                dialog.setInfo();
+
+                dialog.ShowDialog();
+                var res = dialog.DialogResult;
+                if (res == DialogResult.OK)
+                {
+                    MessageBox.Show("OK");
+                }
+                else if (res == DialogResult.Cancel)
+                {
+                    MessageBox.Show("Cancel");
+                }
+            }
+        }
     }
 }

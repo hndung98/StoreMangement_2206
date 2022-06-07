@@ -40,7 +40,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tbxPhoneNumber = new System.Windows.Forms.TextBox();
-            this.btxEmail = new System.Windows.Forms.TextBox();
+            this.tbxEmail = new System.Windows.Forms.TextBox();
             this.tbxRentalCost = new System.Windows.Forms.TextBox();
             this.cbxManager = new System.Windows.Forms.ComboBox();
             this.dtpOpenningDate = new System.Windows.Forms.DateTimePicker();
@@ -169,12 +169,12 @@
             this.tbxPhoneNumber.Size = new System.Drawing.Size(257, 20);
             this.tbxPhoneNumber.TabIndex = 11;
             // 
-            // btxEmail
+            // tbxEmail
             // 
-            this.btxEmail.Location = new System.Drawing.Point(132, 104);
-            this.btxEmail.Name = "btxEmail";
-            this.btxEmail.Size = new System.Drawing.Size(257, 20);
-            this.btxEmail.TabIndex = 12;
+            this.tbxEmail.Location = new System.Drawing.Point(132, 104);
+            this.tbxEmail.Name = "tbxEmail";
+            this.tbxEmail.Size = new System.Drawing.Size(257, 20);
+            this.tbxEmail.TabIndex = 12;
             // 
             // tbxRentalCost
             // 
@@ -297,7 +297,7 @@
             this.Controls.Add(this.dtpOpenningDate);
             this.Controls.Add(this.cbxManager);
             this.Controls.Add(this.tbxRentalCost);
-            this.Controls.Add(this.btxEmail);
+            this.Controls.Add(this.tbxEmail);
             this.Controls.Add(this.tbxPhoneNumber);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -331,7 +331,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbxPhoneNumber;
-        private System.Windows.Forms.TextBox btxEmail;
+        private System.Windows.Forms.TextBox tbxEmail;
         private System.Windows.Forms.TextBox tbxRentalCost;
         private System.Windows.Forms.ComboBox cbxManager;
         private System.Windows.Forms.DateTimePicker dtpOpenningDate;

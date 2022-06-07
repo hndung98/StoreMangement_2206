@@ -16,5 +16,19 @@ namespace StoreManagementApp.Dialog
         {
             InitializeComponent();
         }
+
+        public void setInfo()
+        {
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+        }
     }
 }

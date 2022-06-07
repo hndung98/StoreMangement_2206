@@ -51,12 +51,19 @@
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.dgvCustomerInquiry = new System.Windows.Forms.DataGridView();
             this.tabEmployee = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnReloadEmployee = new System.Windows.Forms.Button();
             this.btnDeleteEmployee = new System.Windows.Forms.Button();
             this.btnEditEmployee = new System.Windows.Forms.Button();
             this.btnAddEmployee = new System.Windows.Forms.Button();
-            this.btnReloadEmployee = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tabStoreItem = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dgvStoreItemInquiry = new System.Windows.Forms.DataGridView();
+            this.btnReloadStoreItem = new System.Windows.Forms.Button();
+            this.btnDeleteStoreItem = new System.Windows.Forms.Button();
+            this.btnEditStoreItem = new System.Windows.Forms.Button();
+            this.btnAddStoreItem = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabStore.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStoreInquiry)).BeginInit();
@@ -66,12 +73,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerInquiry)).BeginInit();
             this.tabEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabStoreItem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStoreItemInquiry)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
             // 
             this.tabControl.Controls.Add(this.tabStore);
             this.tabControl.Controls.Add(this.tabItem);
+            this.tabControl.Controls.Add(this.tabStoreItem);
             this.tabControl.Controls.Add(this.tabCustomer);
             this.tabControl.Controls.Add(this.tabEmployee);
             this.tabControl.Location = new System.Drawing.Point(12, 12);
@@ -167,7 +177,9 @@
             this.dgvStoreInquiry.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvStoreInquiry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStoreInquiry.Location = new System.Drawing.Point(6, 31);
+            this.dgvStoreInquiry.MultiSelect = false;
             this.dgvStoreInquiry.Name = "dgvStoreInquiry";
+            this.dgvStoreInquiry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStoreInquiry.Size = new System.Drawing.Size(724, 300);
             this.dgvStoreInquiry.TabIndex = 0;
             // 
@@ -256,7 +268,9 @@
             this.dgvItemInquiry.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvItemInquiry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvItemInquiry.Location = new System.Drawing.Point(6, 31);
+            this.dgvItemInquiry.MultiSelect = false;
             this.dgvItemInquiry.Name = "dgvItemInquiry";
+            this.dgvItemInquiry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvItemInquiry.Size = new System.Drawing.Size(724, 300);
             this.dgvItemInquiry.TabIndex = 1;
             // 
@@ -342,7 +356,9 @@
             this.dgvCustomerInquiry.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvCustomerInquiry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCustomerInquiry.Location = new System.Drawing.Point(6, 31);
+            this.dgvCustomerInquiry.MultiSelect = false;
             this.dgvCustomerInquiry.Name = "dgvCustomerInquiry";
+            this.dgvCustomerInquiry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCustomerInquiry.Size = new System.Drawing.Size(724, 300);
             this.dgvCustomerInquiry.TabIndex = 2;
             // 
@@ -361,28 +377,17 @@
             this.tabEmployee.TabIndex = 3;
             this.tabEmployee.Text = "Employee";
             // 
-            // label4
+            // btnReloadEmployee
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label4.Location = new System.Drawing.Point(11, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 15);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Employee list";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGray;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 31);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(724, 300);
-            this.dataGridView1.TabIndex = 13;
+            this.btnReloadEmployee.BackColor = System.Drawing.Color.LightBlue;
+            this.btnReloadEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnReloadEmployee.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnReloadEmployee.Location = new System.Drawing.Point(440, 337);
+            this.btnReloadEmployee.Name = "btnReloadEmployee";
+            this.btnReloadEmployee.Size = new System.Drawing.Size(67, 34);
+            this.btnReloadEmployee.TabIndex = 17;
+            this.btnReloadEmployee.Text = "Reload";
+            this.btnReloadEmployee.UseVisualStyleBackColor = false;
             // 
             // btnDeleteEmployee
             // 
@@ -419,18 +424,120 @@
             this.btnAddEmployee.TabIndex = 14;
             this.btnAddEmployee.Text = "Add";
             this.btnAddEmployee.UseVisualStyleBackColor = false;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
-            // btnReloadEmployee
+            // dataGridView1
             // 
-            this.btnReloadEmployee.BackColor = System.Drawing.Color.LightBlue;
-            this.btnReloadEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnReloadEmployee.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnReloadEmployee.Location = new System.Drawing.Point(440, 337);
-            this.btnReloadEmployee.Name = "btnReloadEmployee";
-            this.btnReloadEmployee.Size = new System.Drawing.Size(67, 34);
-            this.btnReloadEmployee.TabIndex = 17;
-            this.btnReloadEmployee.Text = "Reload";
-            this.btnReloadEmployee.UseVisualStyleBackColor = false;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 31);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(724, 300);
+            this.dataGridView1.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label4.Location = new System.Drawing.Point(11, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 15);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Employee list";
+            // 
+            // tabStoreItem
+            // 
+            this.tabStoreItem.Controls.Add(this.btnReloadStoreItem);
+            this.tabStoreItem.Controls.Add(this.btnDeleteStoreItem);
+            this.tabStoreItem.Controls.Add(this.btnEditStoreItem);
+            this.tabStoreItem.Controls.Add(this.btnAddStoreItem);
+            this.tabStoreItem.Controls.Add(this.dgvStoreItemInquiry);
+            this.tabStoreItem.Controls.Add(this.label5);
+            this.tabStoreItem.Location = new System.Drawing.Point(4, 22);
+            this.tabStoreItem.Name = "tabStoreItem";
+            this.tabStoreItem.Size = new System.Drawing.Size(736, 377);
+            this.tabStoreItem.TabIndex = 4;
+            this.tabStoreItem.Text = "Store Item";
+            this.tabStoreItem.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label5.Location = new System.Drawing.Point(11, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 15);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Item list";
+            // 
+            // dgvStoreItemInquiry
+            // 
+            this.dgvStoreItemInquiry.AllowUserToAddRows = false;
+            this.dgvStoreItemInquiry.AllowUserToDeleteRows = false;
+            this.dgvStoreItemInquiry.AllowUserToResizeRows = false;
+            this.dgvStoreItemInquiry.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dgvStoreItemInquiry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStoreItemInquiry.Location = new System.Drawing.Point(6, 31);
+            this.dgvStoreItemInquiry.MultiSelect = false;
+            this.dgvStoreItemInquiry.Name = "dgvStoreItemInquiry";
+            this.dgvStoreItemInquiry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvStoreItemInquiry.Size = new System.Drawing.Size(724, 300);
+            this.dgvStoreItemInquiry.TabIndex = 9;
+            // 
+            // btnReloadStoreItem
+            // 
+            this.btnReloadStoreItem.BackColor = System.Drawing.Color.LightBlue;
+            this.btnReloadStoreItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnReloadStoreItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnReloadStoreItem.Location = new System.Drawing.Point(440, 337);
+            this.btnReloadStoreItem.Name = "btnReloadStoreItem";
+            this.btnReloadStoreItem.Size = new System.Drawing.Size(67, 34);
+            this.btnReloadStoreItem.TabIndex = 14;
+            this.btnReloadStoreItem.Text = "Reload";
+            this.btnReloadStoreItem.UseVisualStyleBackColor = false;
+            // 
+            // btnDeleteStoreItem
+            // 
+            this.btnDeleteStoreItem.BackColor = System.Drawing.Color.LightBlue;
+            this.btnDeleteStoreItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDeleteStoreItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnDeleteStoreItem.Location = new System.Drawing.Point(663, 337);
+            this.btnDeleteStoreItem.Name = "btnDeleteStoreItem";
+            this.btnDeleteStoreItem.Size = new System.Drawing.Size(67, 34);
+            this.btnDeleteStoreItem.TabIndex = 13;
+            this.btnDeleteStoreItem.Text = "Delete";
+            this.btnDeleteStoreItem.UseVisualStyleBackColor = false;
+            // 
+            // btnEditStoreItem
+            // 
+            this.btnEditStoreItem.BackColor = System.Drawing.Color.LightBlue;
+            this.btnEditStoreItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnEditStoreItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnEditStoreItem.Location = new System.Drawing.Point(586, 337);
+            this.btnEditStoreItem.Name = "btnEditStoreItem";
+            this.btnEditStoreItem.Size = new System.Drawing.Size(67, 34);
+            this.btnEditStoreItem.TabIndex = 12;
+            this.btnEditStoreItem.Text = "Edit";
+            this.btnEditStoreItem.UseVisualStyleBackColor = false;
+            // 
+            // btnAddStoreItem
+            // 
+            this.btnAddStoreItem.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAddStoreItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnAddStoreItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAddStoreItem.Location = new System.Drawing.Point(513, 337);
+            this.btnAddStoreItem.Name = "btnAddStoreItem";
+            this.btnAddStoreItem.Size = new System.Drawing.Size(67, 34);
+            this.btnAddStoreItem.TabIndex = 11;
+            this.btnAddStoreItem.Text = "Add";
+            this.btnAddStoreItem.UseVisualStyleBackColor = false;
             // 
             // MainScreen
             // 
@@ -454,6 +561,9 @@
             this.tabEmployee.ResumeLayout(false);
             this.tabEmployee.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabStoreItem.ResumeLayout(false);
+            this.tabStoreItem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStoreItemInquiry)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -489,6 +599,13 @@
         private System.Windows.Forms.Button btnEditEmployee;
         private System.Windows.Forms.Button btnAddEmployee;
         private System.Windows.Forms.Button btnReloadEmployee;
+        private System.Windows.Forms.TabPage tabStoreItem;
+        private System.Windows.Forms.Button btnReloadStoreItem;
+        private System.Windows.Forms.Button btnDeleteStoreItem;
+        private System.Windows.Forms.Button btnEditStoreItem;
+        private System.Windows.Forms.Button btnAddStoreItem;
+        private System.Windows.Forms.DataGridView dgvStoreItemInquiry;
+        private System.Windows.Forms.Label label5;
     }
 }
 
