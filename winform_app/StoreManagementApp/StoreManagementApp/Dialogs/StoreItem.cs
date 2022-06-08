@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StoreManagementApp.Dialog
+namespace StoreManagementApp.Dialogs
 {
-    public partial class Customer : Form
+    public partial class StoreItem : Form
     {
-        public Customer()
+        public StoreItem()
         {
             InitializeComponent();
         }
@@ -29,6 +29,15 @@ namespace StoreManagementApp.Dialog
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+        }
+
+        private void tbxPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != ' '))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

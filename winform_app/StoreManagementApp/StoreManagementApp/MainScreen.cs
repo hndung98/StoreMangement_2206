@@ -1,13 +1,10 @@
-﻿using StoreManagementApp.Dialog;
+﻿using StoreManagementApp.Dialogs;
+using StoreManagementApp.Services;
+
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StoreManagementApp
@@ -35,7 +32,7 @@ namespace StoreManagementApp
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
-            connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
+            connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Database2"].ConnectionString;
 
             conn = new SqlConnection(connectionString);
             conn.Open();
@@ -56,6 +53,8 @@ namespace StoreManagementApp
 
             da.Dispose();
 
+            var lst = dataTable.AsEnumerable().Select(x => x.Field<string>("StoreName"));
+
             return dataTable;
         }
 
@@ -70,6 +69,7 @@ namespace StoreManagementApp
 
         private void btnReloadItem_Click(object sender, EventArgs e)
         {
+            return;
             string query = "SELECT * FROM TBL_StoreItem";
 
             DataTable dt = PullData(query);
@@ -81,18 +81,10 @@ namespace StoreManagementApp
         {
             using (Store dialog = new Store())
             {
-                var managerList = new List<string>();
-                managerList.Add("HN Dung - 1");
-                managerList.Add("HN Hung - 5");
-                managerList.Add("HN Phat - 12");
-
-                dialog.StoreName = "Quan An 1";
-                dialog.PhoneNumber = "035 241 2123";
-                dialog.RentalCost = "10,000,000";
-                dialog.managerList = managerList;
-                dialog.setInfo();
+                dialog.Title = "Thêm cửa hàng";
 
                 dialog.ShowDialog();
+
                 var res = dialog.DialogResult;
                 if (res == DialogResult.OK)
                 {
@@ -109,22 +101,16 @@ namespace StoreManagementApp
         {
             using (Store dialog = new Store())
             {
-                var managerList = new List<string>();
-                managerList.Add("HN Dung - 1");
-                managerList.Add("HN Hung - 5");
-                managerList.Add("HN Phat - 12");
-
+                dialog.Title = "Cập nhật cửa hàng";
                 dialog.StoreName = "Quan An 1";
-                dialog.PhoneNumber = "035 241 2123";
-                dialog.RentalCost = "10,000,000";
-                dialog.managerList = managerList;
-                dialog.setInfo();
+                dialog.PhoneNumber = "035 777 2123";
+                dialog.RentalCost = "10 000 000";
 
                 dialog.ShowDialog();
+
                 var res = dialog.DialogResult;
                 if (res == DialogResult.OK)
                 {
-                    MessageBox.Show(dialog.StoreName + dialog.PhoneNumber + dialog.RentalCost);
                 }
                 else if (res == DialogResult.Cancel)
                 {
@@ -136,6 +122,147 @@ namespace StoreManagementApp
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
             using (Employee dialog = new Employee())
+            {
+                var storeList = new List<string>();
+                dialog.setInfo();
+
+                dialog.ShowDialog();
+                var res = dialog.DialogResult;
+                if (res == DialogResult.OK)
+                {
+                    MessageBox.Show("OK");
+                }
+                else if (res == DialogResult.Cancel)
+                {
+                    MessageBox.Show("Cancel");
+                }
+            }
+        }
+
+        private void btnEditEmployee_Click(object sender, EventArgs e)
+        {
+            using (Employee dialog = new Employee())
+            {
+                var storeList = new List<string>();
+                dialog.setInfo();
+
+                dialog.ShowDialog();
+                var res = dialog.DialogResult;
+                if (res == DialogResult.OK)
+                {
+                    MessageBox.Show("OK");
+                }
+                else if (res == DialogResult.Cancel)
+                {
+                    MessageBox.Show("Cancel");
+                }
+            }
+        }
+
+        private void btnAddItem_Click(object sender, EventArgs e)
+        {
+            using (Item dialog = new Item())
+            {
+                var storeList = new List<string>();
+                dialog.setInfo();
+
+                dialog.ShowDialog();
+                var res = dialog.DialogResult;
+                if (res == DialogResult.OK)
+                {
+                    MessageBox.Show("OK");
+                }
+                else if (res == DialogResult.Cancel)
+                {
+                    MessageBox.Show("Cancel");
+                }
+            }
+        }
+
+        private void btnEditItem_Click(object sender, EventArgs e)
+        {
+            using (Item dialog = new Item())
+            {
+                var storeList = new List<string>();
+                dialog.setInfo();
+
+                dialog.ShowDialog();
+                var res = dialog.DialogResult;
+                if (res == DialogResult.OK)
+                {
+                    MessageBox.Show("OK");
+                }
+                else if (res == DialogResult.Cancel)
+                {
+                    MessageBox.Show("Cancel");
+                }
+            }
+        }
+
+        private void btnAddStoreItem_Click(object sender, EventArgs e)
+        {
+            using (StoreItem dialog = new StoreItem())
+            {
+                var storeList = new List<string>();
+                dialog.setInfo();
+
+                dialog.ShowDialog();
+                var res = dialog.DialogResult;
+                if (res == DialogResult.OK)
+                {
+                    MessageBox.Show("OK");
+                }
+                else if (res == DialogResult.Cancel)
+                {
+                    MessageBox.Show("Cancel");
+                }
+            }
+        }
+
+        private void btnEditStoreItem_Click(object sender, EventArgs e)
+        {
+            using (StoreItem dialog = new StoreItem())
+            {
+                var storeList = new List<string>();
+                dialog.setInfo();
+
+                dialog.ShowDialog();
+                var res = dialog.DialogResult;
+                if (res == DialogResult.OK)
+                {
+                    MessageBox.Show("OK");
+                }
+                else if (res == DialogResult.Cancel)
+                {
+                    MessageBox.Show("Cancel");
+                }
+            }
+        }
+
+        private void btnAddCustomer_Click(object sender, EventArgs e)
+        {
+            using (Customer dialog = new Customer())
+            {
+                var storeList = new List<string>();
+                dialog.setInfo();
+
+                dialog.ShowDialog();
+                var res = dialog.DialogResult;
+                if (res == DialogResult.OK)
+                {
+                    MessageBox.Show("OK");
+                }
+                else if (res == DialogResult.Cancel)
+                {
+                    MessageBox.Show("Cancel");
+                }
+            }
+        }
+
+        private void btnEditCustomer_Click(object sender, EventArgs e)
+        {
+
+            using (Customer dialog = new Customer())
             {
                 var storeList = new List<string>();
                 dialog.setInfo();

@@ -47,34 +47,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dialog\Customer.cs">
+    <Compile Include="Dialogs\Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialog\Customer.Designer.cs">
+    <Compile Include="Dialogs\Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dialog\Employee.cs">
+    <Compile Include="Dialogs\Employee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialog\Employee.Designer.cs">
+    <Compile Include="Dialogs\Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dialog\Item.cs">
+    <Compile Include="Dialogs\Item.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialog\Item.Designer.cs">
+    <Compile Include="Dialogs\Item.Designer.cs">
       <DependentUpon>Item.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dialog\Store.cs">
+    <Compile Include="Dialogs\Store.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialog\Store.Designer.cs">
+    <Compile Include="Dialogs\Store.Designer.cs">
       <DependentUpon>Store.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dialog\StoreItem.cs">
+    <Compile Include="Dialogs\StoreItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialog\StoreItem.Designer.cs">
+    <Compile Include="Dialogs\StoreItem.Designer.cs">
       <DependentUpon>StoreItem.cs</DependentUpon>
     </Compile>
     <Compile Include="MainScreen.cs">
@@ -85,19 +85,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Dialog\Customer.resx">
+    <Compile Include="Services\Controls.cs" />
+    <EmbeddedResource Include="Dialogs\Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialog\Employee.resx">
+    <EmbeddedResource Include="Dialogs\Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialog\Item.resx">
+    <EmbeddedResource Include="Dialogs\Item.resx">
       <DependentUpon>Item.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialog\Store.resx">
+    <EmbeddedResource Include="Dialogs\Store.resx">
       <DependentUpon>Store.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialog\StoreItem.resx">
+    <EmbeddedResource Include="Dialogs\StoreItem.resx">
       <DependentUpon>StoreItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainScreen.resx">
@@ -125,6 +126,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

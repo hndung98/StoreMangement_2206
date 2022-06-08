@@ -1,10 +1,12 @@
+USE [StoreManagement]
+GO
 
 ------------------ CREATE TABLES ------------------
 
 CREATE TABLE TBL_Control
 (
 	ControlID			INT IDENTITY(1,1) NOT NULL,
-	ControlGroup		NVARCHAR(10) NOT NULL,
+	ControlGroup		NVARCHAR(30) NOT NULL,
 	ControlValue		TINYINT NOT NULL,
 	ControlName			NVARCHAR(50) NOT NULL,
 

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StoreManagementApp.Dialog
+namespace StoreManagementApp.Dialogs
 {
     public partial class Employee : Form
     {
@@ -34,6 +34,24 @@ namespace StoreManagementApp.Dialog
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+        }
+
+        private void tbxPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != ' '))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbxSalary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != ' '))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
