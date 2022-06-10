@@ -11,14 +11,7 @@ namespace StoreManagementApp
 {
     public partial class MainScreen : Form
     {
-        string connectionString = string.Empty;
-
-        SqlConnection conn = null;
-
-        DataTable dtStore = new DataTable();
-        DataTable dtItem = new DataTable();
-        DataTable dtCustomer = new DataTable();
-        DataTable dtEmployee = new DataTable();
+        AppServices services;
 
         public MainScreen()
         {
@@ -27,42 +20,18 @@ namespace StoreManagementApp
 
         ~MainScreen()
         {
-            conn.Close();
         }
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
-            connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Database2"].ConnectionString;
-
-            conn = new SqlConnection(connectionString);
-            conn.Open();
-        }
-
-        // your method to pull data from database to datatable   
-        public DataTable PullData(string query)
-        {
-            // your data table
-            DataTable dataTable = new DataTable();
-
-            SqlCommand cmd = new SqlCommand(query, conn);
-
-            // create data adapter
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-            da.Fill(dataTable);
-
-            da.Dispose();
-
-            var lst = dataTable.AsEnumerable().Select(x => x.Field<string>("StoreName"));
-
-            return dataTable;
+            services = new AppServices();
         }
 
         private void btnReloadStore_Click(object sender, EventArgs e)
-        {
+        {            
             string query = "SELECT * FROM TBL_Store";
 
-            DataTable dt = PullData(query);
+            DataTable dt = services.PullData(query);
 
             dgvStoreInquiry.DataSource = dt;
         }
@@ -72,7 +41,7 @@ namespace StoreManagementApp
             return;
             string query = "SELECT * FROM TBL_StoreItem";
 
-            DataTable dt = PullData(query);
+            DataTable dt = services.PullData(query);
 
             dgvItemInquiry.DataSource = dt;
         }
@@ -83,6 +52,8 @@ namespace StoreManagementApp
             {
                 dialog.Title = "Thêm cửa hàng";
 
+                dialog.services = services;
+                dialog.setInfo();
                 dialog.ShowDialog();
 
                 var res = dialog.DialogResult;
@@ -106,6 +77,8 @@ namespace StoreManagementApp
                 dialog.PhoneNumber = "035 777 2123";
                 dialog.RentalCost = "10 000 000";
 
+                dialog.services = services;
+                dialog.setInfo();
                 dialog.ShowDialog();
 
                 var res = dialog.DialogResult;
@@ -124,9 +97,11 @@ namespace StoreManagementApp
             using (Employee dialog = new Employee())
             {
                 var storeList = new List<string>();
-                dialog.setInfo();
 
+                dialog.services = services;
+                dialog.setInfo();
                 dialog.ShowDialog();
+
                 var res = dialog.DialogResult;
                 if (res == DialogResult.OK)
                 {
@@ -144,9 +119,11 @@ namespace StoreManagementApp
             using (Employee dialog = new Employee())
             {
                 var storeList = new List<string>();
-                dialog.setInfo();
 
+                dialog.services = services;
+                dialog.setInfo();
                 dialog.ShowDialog();
+
                 var res = dialog.DialogResult;
                 if (res == DialogResult.OK)
                 {
@@ -164,9 +141,11 @@ namespace StoreManagementApp
             using (Item dialog = new Item())
             {
                 var storeList = new List<string>();
-                dialog.setInfo();
 
+                dialog.services = services;
+                dialog.setInfo();
                 dialog.ShowDialog();
+
                 var res = dialog.DialogResult;
                 if (res == DialogResult.OK)
                 {
@@ -184,9 +163,11 @@ namespace StoreManagementApp
             using (Item dialog = new Item())
             {
                 var storeList = new List<string>();
-                dialog.setInfo();
 
+                dialog.services = services;
+                dialog.setInfo();
                 dialog.ShowDialog();
+
                 var res = dialog.DialogResult;
                 if (res == DialogResult.OK)
                 {
@@ -244,9 +225,11 @@ namespace StoreManagementApp
             using (Customer dialog = new Customer())
             {
                 var storeList = new List<string>();
-                dialog.setInfo();
 
+                dialog.services = services;
+                dialog.setInfo();
                 dialog.ShowDialog();
+
                 var res = dialog.DialogResult;
                 if (res == DialogResult.OK)
                 {
@@ -265,9 +248,11 @@ namespace StoreManagementApp
             using (Customer dialog = new Customer())
             {
                 var storeList = new List<string>();
-                dialog.setInfo();
 
+                dialog.services = services;
+                dialog.setInfo();
                 dialog.ShowDialog();
+
                 var res = dialog.DialogResult;
                 if (res == DialogResult.OK)
                 {

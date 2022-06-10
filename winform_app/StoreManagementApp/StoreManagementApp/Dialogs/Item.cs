@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StoreManagementApp.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,13 @@ namespace StoreManagementApp.Dialogs
 {
     public partial class Item : Form
     {
+        public List<ControlGroup> lstManagers = new List<ControlGroup>();
+        public List<ControlGroup> lstProvinces = new List<ControlGroup>();
+        public List<ControlGroup> lstDistricts = new List<ControlGroup>();
+        public List<ControlGroup> lstWards = new List<ControlGroup>();
+
+        public AppServices services;
+
         public Item()
         {
             InitializeComponent();

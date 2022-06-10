@@ -85,7 +85,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Controls.cs" />
+    <Compile Include="Services\AppServices.cs" />
     <EmbeddedResource Include="Dialogs\Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>

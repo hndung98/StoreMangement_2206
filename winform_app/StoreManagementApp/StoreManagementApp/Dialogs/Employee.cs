@@ -1,17 +1,18 @@
-﻿using System;
+﻿using StoreManagementApp.Services;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StoreManagementApp.Dialogs
 {
     public partial class Employee : Form
     {
+        public List<ControlGroup> lstManagers = new List<ControlGroup>();
+        public List<ControlGroup> lstProvinces = new List<ControlGroup>();
+        public List<ControlGroup> lstDistricts = new List<ControlGroup>();
+        public List<ControlGroup> lstWards = new List<ControlGroup>();
+
+        public AppServices services;
         public Employee()
         {
             InitializeComponent();

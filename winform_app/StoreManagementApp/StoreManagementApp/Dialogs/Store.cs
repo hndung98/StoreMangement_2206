@@ -20,19 +20,16 @@ namespace StoreManagementApp.Dialogs
         public string Ward = "";
         public string Detail = "";
 
-        public List<string> lstManagers = new List<string>();
-        public List<string> lstProvinces = new List<string>();
-        public List<string> lstDistricts = new List<string>();
-        public List<string> lstWards = new List<string>();
+        public List<ControlGroup> lstManagers = new List<ControlGroup>();
+        public List<ControlGroup> lstProvinces = new List<ControlGroup>();
+        public List<ControlGroup> lstDistricts = new List<ControlGroup>();
+        public List<ControlGroup> lstWards = new List<ControlGroup>();
+
+        public AppServices services;
 
         public Store()
         {
             InitializeComponent();
-
-            lstManagers = AppServices.GetManagers();
-            lstProvinces = AppServices.GetProvinces();
-
-            setInfo();
         }
 
         public void setInfo()
@@ -42,13 +39,15 @@ namespace StoreManagementApp.Dialogs
             tbxPhoneNumber.Text = PhoneNumber;
             tbxRentalCost.Text = RentalCost;
 
+            lstProvinces = services.GetControls("Province");
+
             foreach (var item in lstManagers)
             {
                 cbxManager.Items.Add(item);
             }
             foreach (var item in lstProvinces)
             {
-                cbxProvince.Items.Add(item);
+                cbxProvince.Items.Add(item.name + " - " + item.value);
             }
         }
 
@@ -59,11 +58,11 @@ namespace StoreManagementApp.Dialogs
             cbxDistrict.Items.Clear();
             cbxWard.Items.Clear();
 
-            lstDistricts = AppServices.GetDistricts(province);
+            lstDistricts = services.GetControls(province);
 
             foreach (var item in lstDistricts)
             {
-                cbxDistrict.Items.Add(item);
+                cbxDistrict.Items.Add(item.name + " - " + item.value);
             }
         }
 
@@ -72,11 +71,11 @@ namespace StoreManagementApp.Dialogs
             lstWards.Clear();
             cbxWard.Items.Clear();
 
-            lstWards = AppServices.GetWards(district);
+            lstWards = services.GetControls(district);
 
             foreach (var item in lstWards)
             {
-                cbxWard.Items.Add(item);
+                cbxWard.Items.Add(item.name + " - " + item.value);
             }
         }
 
@@ -89,22 +88,22 @@ namespace StoreManagementApp.Dialogs
             RentalCost = tbxRentalCost.Text;
             OpenningDate = dtpOpenningDate.Text;
             ClosingDate = dtpClosingDate.Text;
-            Province = cbxProvince.Text;
-            District = cbxDistrict.Text;
-            Ward = cbxWard.Text;
+            Province = string.IsNullOrEmpty(cbxProvince.Text) ? string.Empty : cbxProvince.Text.Replace(" - ","-").Split('-')[1];
+            District = string.IsNullOrEmpty(cbxDistrict.Text) ? string.Empty : cbxDistrict.Text.Replace(" - ", "-").Split('-')[1];
+            Ward = string.IsNullOrEmpty(cbxWard.Text) ? string.Empty : cbxWard.Text.Replace(" - ", "-").Split('-')[1];
             Detail = tbxDetails.Text;
 
-            MessageBox.Show(StoreName + "-\n" +
-                PhoneNumber + "-\n" +
-                Email + "-\n" +
-                Manager + "-\n" +
-                RentalCost + "-\n" +
-                OpenningDate + "-\n" +
-                ClosingDate + "-\n" +
-                Province + "-\n" +
-                District + "-\n" +
-                Ward + "-\n" +
-                Detail + "-\n" +
+            MessageBox.Show(StoreName + "\n" +
+                "PhoneNumber: " + PhoneNumber + "\n" +
+                "Email: " + Email + "\n" +
+                "Manager: " + Manager + "\n" +
+                "RentalCost: " + RentalCost + "\n" +
+                "OpenningDate: " + OpenningDate + "\n" +
+                "ClosingDate: " + ClosingDate + "\n" +
+                "Province: " + Province + "\n" +
+                "District: " + District + "\n" +
+                "Ward: " + Ward + "\n" +
+                "Detail: " + Detail + "\n" +
                 ""
                 );
 
