@@ -51,7 +51,7 @@ CREATE TABLE TBL_Voucher
 	EndingDate			DATE NULL,
 	DiscountRate		SMALLINT NOT NULL,
 	MaximumAmount		DECIMAL(12) NULL,
-	CurrentStatus		TINYINT NOT NULL,
+	Quantity			INT NOT NULL,
 
 	PRIMARY KEY (VoucherID),
 );

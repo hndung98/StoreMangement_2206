@@ -96,6 +96,7 @@ namespace StoreManagementApp
         {
             using (Employee dialog = new Employee())
             {
+                dialog.Title = "Thêm nhân viên";
                 var storeList = new List<string>();
 
                 dialog.services = services;
@@ -118,6 +119,7 @@ namespace StoreManagementApp
         {
             using (Employee dialog = new Employee())
             {
+                dialog.Title = "Cập nhật nhân viên";
                 var storeList = new List<string>();
 
                 dialog.services = services;
@@ -140,6 +142,7 @@ namespace StoreManagementApp
         {
             using (Item dialog = new Item())
             {
+                dialog.Title = "Thêm sản phẩm";
                 var storeList = new List<string>();
 
                 dialog.services = services;
@@ -162,6 +165,7 @@ namespace StoreManagementApp
         {
             using (Item dialog = new Item())
             {
+                dialog.Title = "Cập nhật sản phẩm";
                 var storeList = new List<string>();
 
                 dialog.services = services;
@@ -184,6 +188,7 @@ namespace StoreManagementApp
         {
             using (StoreItem dialog = new StoreItem())
             {
+                dialog.Title = "Thêm sản phẩm";
                 var storeList = new List<string>();
                 dialog.setInfo();
 
@@ -204,6 +209,7 @@ namespace StoreManagementApp
         {
             using (StoreItem dialog = new StoreItem())
             {
+                dialog.Title = "Cập nhật sản phẩm";
                 var storeList = new List<string>();
                 dialog.setInfo();
 
@@ -224,6 +230,7 @@ namespace StoreManagementApp
         {
             using (Customer dialog = new Customer())
             {
+                dialog.Title = "Thêm khách hàng";
                 var storeList = new List<string>();
 
                 dialog.services = services;
@@ -247,6 +254,7 @@ namespace StoreManagementApp
 
             using (Customer dialog = new Customer())
             {
+                dialog.Title = "Cập nhật khách hàng";
                 var storeList = new List<string>();
 
                 dialog.services = services;

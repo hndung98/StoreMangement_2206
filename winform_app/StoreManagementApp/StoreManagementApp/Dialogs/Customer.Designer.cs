@@ -51,9 +51,9 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(222, 301);
+            this.btnCancel.Location = new System.Drawing.Point(222, 326);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(115, 29);
+            this.btnCancel.Size = new System.Drawing.Size(115, 31);
             this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -61,9 +61,9 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(88, 301);
+            this.btnOK.Location = new System.Drawing.Point(88, 326);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(115, 29);
+            this.btnOK.Size = new System.Drawing.Size(115, 31);
             this.btnOK.TabIndex = 9;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -73,35 +73,35 @@
             // 
             this.cbxGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxGender.FormattingEnabled = true;
-            this.cbxGender.Location = new System.Drawing.Point(139, 68);
+            this.cbxGender.Location = new System.Drawing.Point(139, 74);
             this.cbxGender.Name = "cbxGender";
-            this.cbxGender.Size = new System.Drawing.Size(257, 20);
+            this.cbxGender.Size = new System.Drawing.Size(257, 21);
             this.cbxGender.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(30, 64);
+            this.label2.Location = new System.Drawing.Point(30, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.Size = new System.Drawing.Size(100, 25);
             this.label2.TabIndex = 28;
             this.label2.Text = "Gender:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tbxCustomerName
             // 
-            this.tbxCustomerName.Location = new System.Drawing.Point(139, 38);
+            this.tbxCustomerName.Location = new System.Drawing.Point(139, 41);
             this.tbxCustomerName.MaxLength = 50;
             this.tbxCustomerName.Name = "tbxCustomerName";
-            this.tbxCustomerName.Size = new System.Drawing.Size(257, 19);
+            this.tbxCustomerName.Size = new System.Drawing.Size(257, 20);
             this.tbxCustomerName.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(30, 35);
+            this.label1.Location = new System.Drawing.Point(30, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.Size = new System.Drawing.Size(100, 25);
             this.label1.TabIndex = 26;
             this.label1.Text = "Customer Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -109,90 +109,90 @@
             // lblTitle
             // 
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTitle.Location = new System.Drawing.Point(61, 8);
+            this.lblTitle.Location = new System.Drawing.Point(61, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(307, 23);
+            this.lblTitle.Size = new System.Drawing.Size(307, 25);
             this.lblTitle.TabIndex = 25;
             this.lblTitle.Text = "Title";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dtpBirthday
             // 
-            this.dtpBirthday.Location = new System.Drawing.Point(139, 130);
+            this.dtpBirthday.Location = new System.Drawing.Point(139, 141);
             this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(257, 19);
+            this.dtpBirthday.Size = new System.Drawing.Size(257, 20);
             this.dtpBirthday.TabIndex = 4;
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(30, 126);
+            this.label6.Location = new System.Drawing.Point(30, 137);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 23);
+            this.label6.Size = new System.Drawing.Size(100, 25);
             this.label6.TabIndex = 34;
             this.label6.Text = "Birthday:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tbxPhoneNumber
             // 
-            this.tbxPhoneNumber.Location = new System.Drawing.Point(139, 99);
+            this.tbxPhoneNumber.Location = new System.Drawing.Point(139, 107);
             this.tbxPhoneNumber.MaxLength = 15;
             this.tbxPhoneNumber.Name = "tbxPhoneNumber";
-            this.tbxPhoneNumber.Size = new System.Drawing.Size(257, 19);
+            this.tbxPhoneNumber.Size = new System.Drawing.Size(257, 20);
             this.tbxPhoneNumber.TabIndex = 3;
             this.tbxPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxPhoneNumber_KeyPress);
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(30, 96);
+            this.label3.Location = new System.Drawing.Point(30, 104);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 23);
+            this.label3.Size = new System.Drawing.Size(100, 25);
             this.label3.TabIndex = 36;
             this.label3.Text = "Phone Number:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tbxDetails
             // 
-            this.tbxDetails.Location = new System.Drawing.Point(139, 252);
+            this.tbxDetails.Location = new System.Drawing.Point(139, 273);
             this.tbxDetails.MaxLength = 50;
             this.tbxDetails.Name = "tbxDetails";
-            this.tbxDetails.Size = new System.Drawing.Size(257, 19);
+            this.tbxDetails.Size = new System.Drawing.Size(257, 20);
             this.tbxDetails.TabIndex = 8;
             // 
             // cbxWard
             // 
             this.cbxWard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxWard.FormattingEnabled = true;
-            this.cbxWard.Location = new System.Drawing.Point(139, 222);
+            this.cbxWard.Location = new System.Drawing.Point(139, 241);
             this.cbxWard.Name = "cbxWard";
-            this.cbxWard.Size = new System.Drawing.Size(257, 20);
+            this.cbxWard.Size = new System.Drawing.Size(257, 21);
             this.cbxWard.TabIndex = 7;
             // 
             // cbxDistrict
             // 
             this.cbxDistrict.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxDistrict.FormattingEnabled = true;
-            this.cbxDistrict.Location = new System.Drawing.Point(139, 193);
+            this.cbxDistrict.Location = new System.Drawing.Point(139, 209);
             this.cbxDistrict.Name = "cbxDistrict";
-            this.cbxDistrict.Size = new System.Drawing.Size(257, 20);
+            this.cbxDistrict.Size = new System.Drawing.Size(257, 21);
             this.cbxDistrict.TabIndex = 6;
             // 
             // cbxProvince
             // 
             this.cbxProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProvince.FormattingEnabled = true;
-            this.cbxProvince.Location = new System.Drawing.Point(139, 162);
+            this.cbxProvince.Location = new System.Drawing.Point(139, 176);
             this.cbxProvince.Name = "cbxProvince";
-            this.cbxProvince.Size = new System.Drawing.Size(257, 20);
+            this.cbxProvince.Size = new System.Drawing.Size(257, 21);
             this.cbxProvince.TabIndex = 5;
             // 
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label11.Location = new System.Drawing.Point(30, 248);
+            this.label11.Location = new System.Drawing.Point(30, 269);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(100, 23);
+            this.label11.Size = new System.Drawing.Size(100, 25);
             this.label11.TabIndex = 43;
             this.label11.Text = "Details:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -200,9 +200,9 @@
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label10.Location = new System.Drawing.Point(30, 219);
+            this.label10.Location = new System.Drawing.Point(30, 237);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 23);
+            this.label10.Size = new System.Drawing.Size(100, 25);
             this.label10.TabIndex = 42;
             this.label10.Text = "Ward:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -210,9 +210,9 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label9.Location = new System.Drawing.Point(30, 189);
+            this.label9.Location = new System.Drawing.Point(30, 205);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 23);
+            this.label9.Size = new System.Drawing.Size(100, 25);
             this.label9.TabIndex = 41;
             this.label9.Text = "District:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -220,18 +220,18 @@
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.Location = new System.Drawing.Point(30, 159);
+            this.label8.Location = new System.Drawing.Point(30, 172);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 23);
+            this.label8.Size = new System.Drawing.Size(100, 25);
             this.label8.TabIndex = 40;
             this.label8.Text = "Province:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Customer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 341);
+            this.ClientSize = new System.Drawing.Size(425, 369);
             this.Controls.Add(this.tbxDetails);
             this.Controls.Add(this.cbxWard);
             this.Controls.Add(this.cbxDistrict);
@@ -254,7 +254,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Customer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CustomerInfo";
+            this.Text = "Customer";
             this.ResumeLayout(false);
             this.PerformLayout();
 

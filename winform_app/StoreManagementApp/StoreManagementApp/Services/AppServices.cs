@@ -33,8 +33,6 @@ namespace StoreManagementApp.Services
 
             da.Dispose();
 
-            List<string> lst = dataTable.AsEnumerable().Select(x => x.Field<string>("StoreName")).ToList();
-
             return dataTable;
         }
 

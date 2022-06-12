@@ -84,10 +84,10 @@
             this.tabControl.Controls.Add(this.tabStoreItem);
             this.tabControl.Controls.Add(this.tabCustomer);
             this.tabControl.Controls.Add(this.tabEmployee);
-            this.tabControl.Location = new System.Drawing.Point(12, 11);
+            this.tabControl.Location = new System.Drawing.Point(12, 12);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(744, 372);
+            this.tabControl.Size = new System.Drawing.Size(744, 403);
             this.tabControl.TabIndex = 0;
             // 
             // tabStore
@@ -103,7 +103,7 @@
             this.tabStore.Location = new System.Drawing.Point(4, 22);
             this.tabStore.Name = "tabStore";
             this.tabStore.Padding = new System.Windows.Forms.Padding(3);
-            this.tabStore.Size = new System.Drawing.Size(736, 346);
+            this.tabStore.Size = new System.Drawing.Size(736, 377);
             this.tabStore.TabIndex = 0;
             this.tabStore.Text = "Store";
             // 
@@ -112,9 +112,9 @@
             this.btnReloadStore.BackColor = System.Drawing.Color.LightBlue;
             this.btnReloadStore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnReloadStore.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnReloadStore.Location = new System.Drawing.Point(440, 311);
+            this.btnReloadStore.Location = new System.Drawing.Point(440, 337);
             this.btnReloadStore.Name = "btnReloadStore";
-            this.btnReloadStore.Size = new System.Drawing.Size(67, 31);
+            this.btnReloadStore.Size = new System.Drawing.Size(67, 34);
             this.btnReloadStore.TabIndex = 1;
             this.btnReloadStore.Text = "Reload";
             this.btnReloadStore.UseVisualStyleBackColor = false;
@@ -125,7 +125,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label2.Location = new System.Drawing.Point(11, 8);
+            this.label2.Location = new System.Drawing.Point(11, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 15);
             this.label2.TabIndex = 8;
@@ -136,9 +136,9 @@
             this.btnDeleteStore.BackColor = System.Drawing.Color.LightBlue;
             this.btnDeleteStore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDeleteStore.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDeleteStore.Location = new System.Drawing.Point(663, 311);
+            this.btnDeleteStore.Location = new System.Drawing.Point(663, 337);
             this.btnDeleteStore.Name = "btnDeleteStore";
-            this.btnDeleteStore.Size = new System.Drawing.Size(67, 31);
+            this.btnDeleteStore.Size = new System.Drawing.Size(67, 34);
             this.btnDeleteStore.TabIndex = 4;
             this.btnDeleteStore.Text = "Delete";
             this.btnDeleteStore.UseVisualStyleBackColor = false;
@@ -148,9 +148,9 @@
             this.btnEditStore.BackColor = System.Drawing.Color.LightBlue;
             this.btnEditStore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnEditStore.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEditStore.Location = new System.Drawing.Point(586, 311);
+            this.btnEditStore.Location = new System.Drawing.Point(586, 337);
             this.btnEditStore.Name = "btnEditStore";
-            this.btnEditStore.Size = new System.Drawing.Size(67, 31);
+            this.btnEditStore.Size = new System.Drawing.Size(67, 34);
             this.btnEditStore.TabIndex = 3;
             this.btnEditStore.Text = "Edit";
             this.btnEditStore.UseVisualStyleBackColor = false;
@@ -161,9 +161,9 @@
             this.btnAddStore.BackColor = System.Drawing.Color.LightBlue;
             this.btnAddStore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnAddStore.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAddStore.Location = new System.Drawing.Point(513, 311);
+            this.btnAddStore.Location = new System.Drawing.Point(513, 337);
             this.btnAddStore.Name = "btnAddStore";
-            this.btnAddStore.Size = new System.Drawing.Size(67, 31);
+            this.btnAddStore.Size = new System.Drawing.Size(67, 34);
             this.btnAddStore.TabIndex = 2;
             this.btnAddStore.Text = "Add";
             this.btnAddStore.UseVisualStyleBackColor = false;
@@ -176,11 +176,11 @@
             this.dgvStoreInquiry.AllowUserToResizeRows = false;
             this.dgvStoreInquiry.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvStoreInquiry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStoreInquiry.Location = new System.Drawing.Point(6, 29);
+            this.dgvStoreInquiry.Location = new System.Drawing.Point(6, 31);
             this.dgvStoreInquiry.MultiSelect = false;
             this.dgvStoreInquiry.Name = "dgvStoreInquiry";
             this.dgvStoreInquiry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStoreInquiry.Size = new System.Drawing.Size(724, 277);
+            this.dgvStoreInquiry.Size = new System.Drawing.Size(724, 300);
             this.dgvStoreInquiry.TabIndex = 0;
             // 
             // tabItem
@@ -196,7 +196,7 @@
             this.tabItem.Location = new System.Drawing.Point(4, 22);
             this.tabItem.Name = "tabItem";
             this.tabItem.Padding = new System.Windows.Forms.Padding(3);
-            this.tabItem.Size = new System.Drawing.Size(736, 346);
+            this.tabItem.Size = new System.Drawing.Size(736, 377);
             this.tabItem.TabIndex = 1;
             this.tabItem.Text = "Item";
             // 
@@ -205,9 +205,9 @@
             this.btnReloadItem.BackColor = System.Drawing.Color.LightBlue;
             this.btnReloadItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnReloadItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnReloadItem.Location = new System.Drawing.Point(440, 311);
+            this.btnReloadItem.Location = new System.Drawing.Point(440, 337);
             this.btnReloadItem.Name = "btnReloadItem";
-            this.btnReloadItem.Size = new System.Drawing.Size(67, 31);
+            this.btnReloadItem.Size = new System.Drawing.Size(67, 34);
             this.btnReloadItem.TabIndex = 10;
             this.btnReloadItem.Text = "Reload";
             this.btnReloadItem.UseVisualStyleBackColor = false;
@@ -218,7 +218,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label1.Location = new System.Drawing.Point(11, 8);
+            this.label1.Location = new System.Drawing.Point(11, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 15);
             this.label1.TabIndex = 7;
@@ -229,9 +229,9 @@
             this.btnDeleteItem.BackColor = System.Drawing.Color.LightBlue;
             this.btnDeleteItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDeleteItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDeleteItem.Location = new System.Drawing.Point(663, 311);
+            this.btnDeleteItem.Location = new System.Drawing.Point(663, 337);
             this.btnDeleteItem.Name = "btnDeleteItem";
-            this.btnDeleteItem.Size = new System.Drawing.Size(67, 31);
+            this.btnDeleteItem.Size = new System.Drawing.Size(67, 34);
             this.btnDeleteItem.TabIndex = 6;
             this.btnDeleteItem.Text = "Delete";
             this.btnDeleteItem.UseVisualStyleBackColor = false;
@@ -241,9 +241,9 @@
             this.btnEditItem.BackColor = System.Drawing.Color.LightBlue;
             this.btnEditItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnEditItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEditItem.Location = new System.Drawing.Point(586, 311);
+            this.btnEditItem.Location = new System.Drawing.Point(586, 337);
             this.btnEditItem.Name = "btnEditItem";
-            this.btnEditItem.Size = new System.Drawing.Size(67, 31);
+            this.btnEditItem.Size = new System.Drawing.Size(67, 34);
             this.btnEditItem.TabIndex = 5;
             this.btnEditItem.Text = "Edit";
             this.btnEditItem.UseVisualStyleBackColor = false;
@@ -254,9 +254,9 @@
             this.btnAddItem.BackColor = System.Drawing.Color.LightBlue;
             this.btnAddItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnAddItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAddItem.Location = new System.Drawing.Point(513, 311);
+            this.btnAddItem.Location = new System.Drawing.Point(513, 337);
             this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(67, 31);
+            this.btnAddItem.Size = new System.Drawing.Size(67, 34);
             this.btnAddItem.TabIndex = 4;
             this.btnAddItem.Text = "Add";
             this.btnAddItem.UseVisualStyleBackColor = false;
@@ -269,11 +269,11 @@
             this.dgvItemInquiry.AllowUserToResizeRows = false;
             this.dgvItemInquiry.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvItemInquiry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvItemInquiry.Location = new System.Drawing.Point(6, 29);
+            this.dgvItemInquiry.Location = new System.Drawing.Point(6, 31);
             this.dgvItemInquiry.MultiSelect = false;
             this.dgvItemInquiry.Name = "dgvItemInquiry";
             this.dgvItemInquiry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvItemInquiry.Size = new System.Drawing.Size(724, 277);
+            this.dgvItemInquiry.Size = new System.Drawing.Size(724, 300);
             this.dgvItemInquiry.TabIndex = 1;
             // 
             // tabStoreItem
@@ -286,7 +286,7 @@
             this.tabStoreItem.Controls.Add(this.label5);
             this.tabStoreItem.Location = new System.Drawing.Point(4, 22);
             this.tabStoreItem.Name = "tabStoreItem";
-            this.tabStoreItem.Size = new System.Drawing.Size(736, 346);
+            this.tabStoreItem.Size = new System.Drawing.Size(736, 377);
             this.tabStoreItem.TabIndex = 4;
             this.tabStoreItem.Text = "Store Item";
             this.tabStoreItem.UseVisualStyleBackColor = true;
@@ -296,9 +296,9 @@
             this.btnReloadStoreItem.BackColor = System.Drawing.Color.LightBlue;
             this.btnReloadStoreItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnReloadStoreItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnReloadStoreItem.Location = new System.Drawing.Point(440, 311);
+            this.btnReloadStoreItem.Location = new System.Drawing.Point(440, 337);
             this.btnReloadStoreItem.Name = "btnReloadStoreItem";
-            this.btnReloadStoreItem.Size = new System.Drawing.Size(67, 31);
+            this.btnReloadStoreItem.Size = new System.Drawing.Size(67, 34);
             this.btnReloadStoreItem.TabIndex = 14;
             this.btnReloadStoreItem.Text = "Reload";
             this.btnReloadStoreItem.UseVisualStyleBackColor = false;
@@ -308,9 +308,9 @@
             this.btnDeleteStoreItem.BackColor = System.Drawing.Color.LightBlue;
             this.btnDeleteStoreItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDeleteStoreItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDeleteStoreItem.Location = new System.Drawing.Point(663, 311);
+            this.btnDeleteStoreItem.Location = new System.Drawing.Point(663, 337);
             this.btnDeleteStoreItem.Name = "btnDeleteStoreItem";
-            this.btnDeleteStoreItem.Size = new System.Drawing.Size(67, 31);
+            this.btnDeleteStoreItem.Size = new System.Drawing.Size(67, 34);
             this.btnDeleteStoreItem.TabIndex = 13;
             this.btnDeleteStoreItem.Text = "Delete";
             this.btnDeleteStoreItem.UseVisualStyleBackColor = false;
@@ -320,9 +320,9 @@
             this.btnEditStoreItem.BackColor = System.Drawing.Color.LightBlue;
             this.btnEditStoreItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnEditStoreItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEditStoreItem.Location = new System.Drawing.Point(586, 311);
+            this.btnEditStoreItem.Location = new System.Drawing.Point(586, 337);
             this.btnEditStoreItem.Name = "btnEditStoreItem";
-            this.btnEditStoreItem.Size = new System.Drawing.Size(67, 31);
+            this.btnEditStoreItem.Size = new System.Drawing.Size(67, 34);
             this.btnEditStoreItem.TabIndex = 12;
             this.btnEditStoreItem.Text = "Edit";
             this.btnEditStoreItem.UseVisualStyleBackColor = false;
@@ -333,9 +333,9 @@
             this.btnAddStoreItem.BackColor = System.Drawing.Color.LightBlue;
             this.btnAddStoreItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnAddStoreItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAddStoreItem.Location = new System.Drawing.Point(513, 311);
+            this.btnAddStoreItem.Location = new System.Drawing.Point(513, 337);
             this.btnAddStoreItem.Name = "btnAddStoreItem";
-            this.btnAddStoreItem.Size = new System.Drawing.Size(67, 31);
+            this.btnAddStoreItem.Size = new System.Drawing.Size(67, 34);
             this.btnAddStoreItem.TabIndex = 11;
             this.btnAddStoreItem.Text = "Add";
             this.btnAddStoreItem.UseVisualStyleBackColor = false;
@@ -348,11 +348,11 @@
             this.dgvStoreItemInquiry.AllowUserToResizeRows = false;
             this.dgvStoreItemInquiry.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvStoreItemInquiry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStoreItemInquiry.Location = new System.Drawing.Point(6, 29);
+            this.dgvStoreItemInquiry.Location = new System.Drawing.Point(6, 31);
             this.dgvStoreItemInquiry.MultiSelect = false;
             this.dgvStoreItemInquiry.Name = "dgvStoreItemInquiry";
             this.dgvStoreItemInquiry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStoreItemInquiry.Size = new System.Drawing.Size(724, 277);
+            this.dgvStoreItemInquiry.Size = new System.Drawing.Size(724, 300);
             this.dgvStoreItemInquiry.TabIndex = 9;
             // 
             // label5
@@ -360,7 +360,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label5.Location = new System.Drawing.Point(11, 8);
+            this.label5.Location = new System.Drawing.Point(11, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 15);
             this.label5.TabIndex = 8;
@@ -377,7 +377,7 @@
             this.tabCustomer.Controls.Add(this.dgvCustomerInquiry);
             this.tabCustomer.Location = new System.Drawing.Point(4, 22);
             this.tabCustomer.Name = "tabCustomer";
-            this.tabCustomer.Size = new System.Drawing.Size(736, 346);
+            this.tabCustomer.Size = new System.Drawing.Size(736, 377);
             this.tabCustomer.TabIndex = 2;
             this.tabCustomer.Text = "Customer";
             // 
@@ -386,9 +386,9 @@
             this.btnReloadCustomer.BackColor = System.Drawing.Color.LightBlue;
             this.btnReloadCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnReloadCustomer.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnReloadCustomer.Location = new System.Drawing.Point(440, 311);
+            this.btnReloadCustomer.Location = new System.Drawing.Point(440, 337);
             this.btnReloadCustomer.Name = "btnReloadCustomer";
-            this.btnReloadCustomer.Size = new System.Drawing.Size(67, 31);
+            this.btnReloadCustomer.Size = new System.Drawing.Size(67, 34);
             this.btnReloadCustomer.TabIndex = 11;
             this.btnReloadCustomer.Text = "Reload";
             this.btnReloadCustomer.UseVisualStyleBackColor = false;
@@ -398,7 +398,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label3.Location = new System.Drawing.Point(11, 8);
+            this.label3.Location = new System.Drawing.Point(11, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 15);
             this.label3.TabIndex = 10;
@@ -409,9 +409,9 @@
             this.btnDeleteCustomer.BackColor = System.Drawing.Color.LightBlue;
             this.btnDeleteCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDeleteCustomer.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDeleteCustomer.Location = new System.Drawing.Point(663, 311);
+            this.btnDeleteCustomer.Location = new System.Drawing.Point(663, 337);
             this.btnDeleteCustomer.Name = "btnDeleteCustomer";
-            this.btnDeleteCustomer.Size = new System.Drawing.Size(67, 31);
+            this.btnDeleteCustomer.Size = new System.Drawing.Size(67, 34);
             this.btnDeleteCustomer.TabIndex = 9;
             this.btnDeleteCustomer.Text = "Delete";
             this.btnDeleteCustomer.UseVisualStyleBackColor = false;
@@ -421,9 +421,9 @@
             this.btnEditCustomer.BackColor = System.Drawing.Color.LightBlue;
             this.btnEditCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnEditCustomer.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEditCustomer.Location = new System.Drawing.Point(586, 311);
+            this.btnEditCustomer.Location = new System.Drawing.Point(586, 337);
             this.btnEditCustomer.Name = "btnEditCustomer";
-            this.btnEditCustomer.Size = new System.Drawing.Size(67, 31);
+            this.btnEditCustomer.Size = new System.Drawing.Size(67, 34);
             this.btnEditCustomer.TabIndex = 8;
             this.btnEditCustomer.Text = "Edit";
             this.btnEditCustomer.UseVisualStyleBackColor = false;
@@ -434,9 +434,9 @@
             this.btnAddCustomer.BackColor = System.Drawing.Color.LightBlue;
             this.btnAddCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnAddCustomer.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAddCustomer.Location = new System.Drawing.Point(513, 311);
+            this.btnAddCustomer.Location = new System.Drawing.Point(513, 337);
             this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Size = new System.Drawing.Size(67, 31);
+            this.btnAddCustomer.Size = new System.Drawing.Size(67, 34);
             this.btnAddCustomer.TabIndex = 7;
             this.btnAddCustomer.Text = "Add";
             this.btnAddCustomer.UseVisualStyleBackColor = false;
@@ -449,11 +449,11 @@
             this.dgvCustomerInquiry.AllowUserToResizeRows = false;
             this.dgvCustomerInquiry.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvCustomerInquiry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomerInquiry.Location = new System.Drawing.Point(6, 29);
+            this.dgvCustomerInquiry.Location = new System.Drawing.Point(6, 31);
             this.dgvCustomerInquiry.MultiSelect = false;
             this.dgvCustomerInquiry.Name = "dgvCustomerInquiry";
             this.dgvCustomerInquiry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomerInquiry.Size = new System.Drawing.Size(724, 277);
+            this.dgvCustomerInquiry.Size = new System.Drawing.Size(724, 300);
             this.dgvCustomerInquiry.TabIndex = 2;
             // 
             // tabEmployee
@@ -467,7 +467,7 @@
             this.tabEmployee.Controls.Add(this.label4);
             this.tabEmployee.Location = new System.Drawing.Point(4, 22);
             this.tabEmployee.Name = "tabEmployee";
-            this.tabEmployee.Size = new System.Drawing.Size(736, 346);
+            this.tabEmployee.Size = new System.Drawing.Size(736, 377);
             this.tabEmployee.TabIndex = 3;
             this.tabEmployee.Text = "Employee";
             // 
@@ -476,9 +476,9 @@
             this.btnReloadEmployee.BackColor = System.Drawing.Color.LightBlue;
             this.btnReloadEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnReloadEmployee.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnReloadEmployee.Location = new System.Drawing.Point(440, 311);
+            this.btnReloadEmployee.Location = new System.Drawing.Point(440, 337);
             this.btnReloadEmployee.Name = "btnReloadEmployee";
-            this.btnReloadEmployee.Size = new System.Drawing.Size(67, 31);
+            this.btnReloadEmployee.Size = new System.Drawing.Size(67, 34);
             this.btnReloadEmployee.TabIndex = 17;
             this.btnReloadEmployee.Text = "Reload";
             this.btnReloadEmployee.UseVisualStyleBackColor = false;
@@ -488,9 +488,9 @@
             this.btnDeleteEmployee.BackColor = System.Drawing.Color.LightBlue;
             this.btnDeleteEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDeleteEmployee.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDeleteEmployee.Location = new System.Drawing.Point(663, 311);
+            this.btnDeleteEmployee.Location = new System.Drawing.Point(663, 337);
             this.btnDeleteEmployee.Name = "btnDeleteEmployee";
-            this.btnDeleteEmployee.Size = new System.Drawing.Size(67, 31);
+            this.btnDeleteEmployee.Size = new System.Drawing.Size(67, 34);
             this.btnDeleteEmployee.TabIndex = 16;
             this.btnDeleteEmployee.Text = "Delete";
             this.btnDeleteEmployee.UseVisualStyleBackColor = false;
@@ -500,9 +500,9 @@
             this.btnEditEmployee.BackColor = System.Drawing.Color.LightBlue;
             this.btnEditEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnEditEmployee.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEditEmployee.Location = new System.Drawing.Point(586, 311);
+            this.btnEditEmployee.Location = new System.Drawing.Point(586, 337);
             this.btnEditEmployee.Name = "btnEditEmployee";
-            this.btnEditEmployee.Size = new System.Drawing.Size(67, 31);
+            this.btnEditEmployee.Size = new System.Drawing.Size(67, 34);
             this.btnEditEmployee.TabIndex = 15;
             this.btnEditEmployee.Text = "Edit";
             this.btnEditEmployee.UseVisualStyleBackColor = false;
@@ -513,9 +513,9 @@
             this.btnAddEmployee.BackColor = System.Drawing.Color.LightBlue;
             this.btnAddEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnAddEmployee.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAddEmployee.Location = new System.Drawing.Point(513, 311);
+            this.btnAddEmployee.Location = new System.Drawing.Point(513, 337);
             this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(67, 31);
+            this.btnAddEmployee.Size = new System.Drawing.Size(67, 34);
             this.btnAddEmployee.TabIndex = 14;
             this.btnAddEmployee.Text = "Add";
             this.btnAddEmployee.UseVisualStyleBackColor = false;
@@ -528,11 +528,11 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGray;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 29);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 31);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(724, 277);
+            this.dataGridView1.Size = new System.Drawing.Size(724, 300);
             this.dataGridView1.TabIndex = 13;
             // 
             // label4
@@ -540,7 +540,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label4.Location = new System.Drawing.Point(11, 8);
+            this.label4.Location = new System.Drawing.Point(11, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 15);
             this.label4.TabIndex = 11;
@@ -548,9 +548,9 @@
             // 
             // MainScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 392);
+            this.ClientSize = new System.Drawing.Size(768, 425);
             this.Controls.Add(this.tabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MainScreen";

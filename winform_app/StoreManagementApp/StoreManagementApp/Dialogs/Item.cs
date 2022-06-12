@@ -13,6 +13,7 @@ namespace StoreManagementApp.Dialogs
 {
     public partial class Item : Form
     {
+        public string Title = "";
         public List<ControlGroup> lstManagers = new List<ControlGroup>();
         public List<ControlGroup> lstProvinces = new List<ControlGroup>();
         public List<ControlGroup> lstDistricts = new List<ControlGroup>();

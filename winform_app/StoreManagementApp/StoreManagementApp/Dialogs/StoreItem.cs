@@ -12,6 +12,8 @@ namespace StoreManagementApp.Dialogs
 {
     public partial class StoreItem : Form
     {
+        public string Title = "";
+
         public StoreItem()
         {
             InitializeComponent();
