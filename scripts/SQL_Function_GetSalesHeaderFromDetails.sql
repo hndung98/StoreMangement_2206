@@ -1,4 +1,4 @@
-ALTER function [dbo].[getSalesHeaderFromDetails](@salesHeaderId int)
+CREATE function [dbo].[getSalesHeaderFromDetails](@salesHeaderId int)
 returns @returnTable table(
 	SalesDate date,
 	HeaderId int,

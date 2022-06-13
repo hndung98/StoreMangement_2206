@@ -1,4 +1,4 @@
-ALTER function [dbo].[GetSalaryByStore](@StoreId int, @Month int)
+CREATE function [dbo].[GetSalaryByStore](@StoreId int, @Month int)
 returns @returnTable table(
 	EmployeeId int,
 	EmployeeName nvarchar(50),

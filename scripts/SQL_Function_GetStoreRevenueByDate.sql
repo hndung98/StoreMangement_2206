@@ -1,4 +1,4 @@
-ALTER function [dbo].[GetStoreRevenueByDate](@SalesDate date)
+CREATE function [dbo].[GetStoreRevenueByDate](@SalesDate date)
 returns @returnTable table(
 	SalesDate date,
 	StoreId int,

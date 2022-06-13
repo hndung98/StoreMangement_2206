@@ -23,7 +23,7 @@ CREATE TABLE TBL_Supplier
 	Province			TINYINT NULL,
 	District			TINYINT NULL,
 	Ward				TINYINT NULL,
-	NumberWithStreet	NVARCHAR(50) NULL,
+	Details				NVARCHAR(50) NULL,
 
 	PRIMARY KEY (SupplierID),
 	UNIQUE (Email, PhoneNumber)
@@ -38,7 +38,7 @@ CREATE TABLE TBL_Shipper
 	Province			TINYINT NULL,
 	District			TINYINT NULL,
 	Ward				TINYINT NULL,
-	NumberWithStreet	NVARCHAR(50) NULL,
+	Details				NVARCHAR(50) NULL,
 
 	PRIMARY KEY (ShipperID),
 	UNIQUE (Email, PhoneNumber)
@@ -66,7 +66,7 @@ CREATE TABLE TBL_Customer
 	Province			TINYINT NULL,
 	District			TINYINT NULL,
 	Ward				TINYINT NULL,
-	NumberWithStreet	NVARCHAR(50) NULL,
+	Details				NVARCHAR(50) NULL,
 
 	PRIMARY KEY (CustomerID),
 	UNIQUE (PhoneNumber),
@@ -85,31 +85,23 @@ CREATE TABLE TBL_Store
 	Province			TINYINT NULL,
 	District			TINYINT NULL,
 	Ward				TINYINT NULL,
-	NumberWithStreet	NVARCHAR(50) NULL,
+	Details				NVARCHAR(50) NULL,
 
 	PRIMARY KEY (StoreID),
 	UNIQUE (PhoneNumber, Email),
 );
 
-CREATE TABLE TBL_ItemType
-(
-	ItemTypeID			INT IDENTITY(1,1) NOT NULL,
-	ItemTypeName		NVARCHAR(50) NOT NULL,
-
-	PRIMARY KEY (ItemTypeID),
-);
-
 CREATE TABLE TBL_Item
 (
 	ItemID				INT IDENTITY(1,1) NOT NULL,
-	ItemTypeID			INT NULL,
+	ItemType			TINYINT NULL,
+	ItemUnit			TINYINT NULL,
 	SupplierID			INT NULL,
 	ItemName			NVARCHAR(50) NOT NULL,
 	Cost				DECIMAL(12) NOT NULL,
 	SuggestedPrice		DECIMAL(12) NULL,				-- SuggestedPrice >= Cost
 
 	PRIMARY KEY (ItemID),
-	FOREIGN KEY (ItemTypeID) REFERENCES TBL_ItemType(ItemTypeID),
 	FOREIGN KEY (SupplierID) REFERENCES TBL_Supplier(SupplierID)
 );
 
@@ -136,13 +128,16 @@ CREATE TABLE TBL_Employee
 	StartingDate		DATE NOT NULL,
 	WorkingStatus		TINYINT NOT NULL,
 	Salary				DECIMAL(12) NOT NULL,
+	Username			NVARCHAR(30),
+	Password			NVARCHAR(30),
 	Province			TINYINT NULL,
 	District			TINYINT NULL,
 	Ward				TINYINT NULL,
-	NumberWithStreet	NVARCHAR(50) NULL,
+	Details				NVARCHAR(50) NULL,
 
 	PRIMARY KEY (EmployeeID),
-	FOREIGN KEY (StoreID) REFERENCES TBL_Store(StoreID)
+	FOREIGN KEY (StoreID) REFERENCES TBL_Store(StoreID),
+	UNIQUE(PhoneNumber, Username)
 );
 
 CREATE TABLE TBL_WorkHour
