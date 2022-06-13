@@ -41,9 +41,9 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(231, 147);
+            this.btnCancel.Location = new System.Drawing.Point(231, 159);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(115, 29);
+            this.btnCancel.Size = new System.Drawing.Size(115, 31);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -51,9 +51,9 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(97, 147);
+            this.btnOK.Location = new System.Drawing.Point(97, 159);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(115, 29);
+            this.btnOK.Size = new System.Drawing.Size(115, 31);
             this.btnOK.TabIndex = 4;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -63,17 +63,17 @@
             // 
             this.cbxStore.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxStore.FormattingEnabled = true;
-            this.cbxStore.Location = new System.Drawing.Point(142, 40);
+            this.cbxStore.Location = new System.Drawing.Point(142, 43);
             this.cbxStore.Name = "cbxStore";
-            this.cbxStore.Size = new System.Drawing.Size(257, 20);
+            this.cbxStore.Size = new System.Drawing.Size(257, 21);
             this.cbxStore.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(33, 36);
+            this.label5.Location = new System.Drawing.Point(33, 39);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 23);
+            this.label5.Size = new System.Drawing.Size(100, 25);
             this.label5.TabIndex = 26;
             this.label5.Text = "Store:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -81,28 +81,28 @@
             // lblTitle
             // 
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTitle.Location = new System.Drawing.Point(64, 8);
+            this.lblTitle.Location = new System.Drawing.Point(64, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(307, 23);
+            this.lblTitle.Size = new System.Drawing.Size(307, 25);
             this.lblTitle.TabIndex = 25;
             this.lblTitle.Text = "Title";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tbxPrice
             // 
-            this.tbxPrice.Location = new System.Drawing.Point(142, 106);
+            this.tbxPrice.Location = new System.Drawing.Point(142, 115);
             this.tbxPrice.MaxLength = 15;
             this.tbxPrice.Name = "tbxPrice";
-            this.tbxPrice.Size = new System.Drawing.Size(257, 19);
+            this.tbxPrice.Size = new System.Drawing.Size(257, 20);
             this.tbxPrice.TabIndex = 3;
             this.tbxPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxPrice_KeyPress);
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(33, 103);
+            this.label1.Location = new System.Drawing.Point(33, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.Size = new System.Drawing.Size(100, 25);
             this.label1.TabIndex = 28;
             this.label1.Text = "Price:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -111,26 +111,26 @@
             // 
             this.cbxItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxItem.FormattingEnabled = true;
-            this.cbxItem.Location = new System.Drawing.Point(142, 71);
+            this.cbxItem.Location = new System.Drawing.Point(142, 77);
             this.cbxItem.Name = "cbxItem";
-            this.cbxItem.Size = new System.Drawing.Size(257, 20);
+            this.cbxItem.Size = new System.Drawing.Size(257, 21);
             this.cbxItem.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(33, 67);
+            this.label2.Location = new System.Drawing.Point(33, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.Size = new System.Drawing.Size(100, 25);
             this.label2.TabIndex = 30;
             this.label2.Text = "Item:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // StoreItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 200);
+            this.ClientSize = new System.Drawing.Size(425, 217);
             this.Controls.Add(this.cbxItem);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbxPrice);
@@ -140,7 +140,7 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "StoreItem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StoreItem";

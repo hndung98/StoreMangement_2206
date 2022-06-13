@@ -47,9 +47,9 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(220, 221);
+            this.btnCancel.Location = new System.Drawing.Point(220, 239);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(115, 29);
+            this.btnCancel.Size = new System.Drawing.Size(115, 31);
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -57,9 +57,9 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(86, 221);
+            this.btnOK.Location = new System.Drawing.Point(86, 239);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(115, 29);
+            this.btnOK.Size = new System.Drawing.Size(115, 31);
             this.btnOK.TabIndex = 6;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -68,9 +68,9 @@
             // lblTitle
             // 
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTitle.Location = new System.Drawing.Point(65, 8);
+            this.lblTitle.Location = new System.Drawing.Point(65, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(307, 23);
+            this.lblTitle.Size = new System.Drawing.Size(307, 25);
             this.lblTitle.TabIndex = 4;
             this.lblTitle.Text = "Title";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -79,35 +79,35 @@
             // 
             this.cbxSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSupplier.FormattingEnabled = true;
-            this.cbxSupplier.Location = new System.Drawing.Point(143, 129);
+            this.cbxSupplier.Location = new System.Drawing.Point(143, 140);
             this.cbxSupplier.Name = "cbxSupplier";
-            this.cbxSupplier.Size = new System.Drawing.Size(257, 20);
+            this.cbxSupplier.Size = new System.Drawing.Size(257, 21);
             this.cbxSupplier.TabIndex = 3;
             // 
             // tbxCost
             // 
-            this.tbxCost.Location = new System.Drawing.Point(143, 156);
+            this.tbxCost.Location = new System.Drawing.Point(143, 169);
             this.tbxCost.MaxLength = 15;
             this.tbxCost.Name = "tbxCost";
-            this.tbxCost.Size = new System.Drawing.Size(257, 19);
+            this.tbxCost.Size = new System.Drawing.Size(257, 20);
             this.tbxCost.TabIndex = 4;
             this.tbxCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxCost_KeyPress);
             // 
             // tbxSuggestedPrice
             // 
-            this.tbxSuggestedPrice.Location = new System.Drawing.Point(143, 184);
+            this.tbxSuggestedPrice.Location = new System.Drawing.Point(143, 199);
             this.tbxSuggestedPrice.MaxLength = 15;
             this.tbxSuggestedPrice.Name = "tbxSuggestedPrice";
-            this.tbxSuggestedPrice.Size = new System.Drawing.Size(257, 19);
+            this.tbxSuggestedPrice.Size = new System.Drawing.Size(257, 20);
             this.tbxSuggestedPrice.TabIndex = 5;
             this.tbxSuggestedPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxSuggestedPrice_KeyPress);
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(34, 181);
+            this.label4.Location = new System.Drawing.Point(34, 196);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 23);
+            this.label4.Size = new System.Drawing.Size(100, 25);
             this.label4.TabIndex = 19;
             this.label4.Text = "Suggested Price:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -115,9 +115,9 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(34, 151);
+            this.label3.Location = new System.Drawing.Point(34, 164);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 23);
+            this.label3.Size = new System.Drawing.Size(100, 25);
             this.label3.TabIndex = 18;
             this.label3.Text = "Cost:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -125,27 +125,27 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(34, 124);
+            this.label2.Location = new System.Drawing.Point(34, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.Size = new System.Drawing.Size(100, 25);
             this.label2.TabIndex = 17;
             this.label2.Text = "Supplier:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tbxItemName
             // 
-            this.tbxItemName.Location = new System.Drawing.Point(143, 101);
+            this.tbxItemName.Location = new System.Drawing.Point(143, 109);
             this.tbxItemName.MaxLength = 50;
             this.tbxItemName.Name = "tbxItemName";
-            this.tbxItemName.Size = new System.Drawing.Size(257, 19);
+            this.tbxItemName.Size = new System.Drawing.Size(257, 20);
             this.tbxItemName.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(34, 98);
+            this.label1.Location = new System.Drawing.Point(34, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.Size = new System.Drawing.Size(100, 25);
             this.label1.TabIndex = 15;
             this.label1.Text = "Item Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -154,17 +154,17 @@
             // 
             this.cbxItemUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxItemUnit.FormattingEnabled = true;
-            this.cbxItemUnit.Location = new System.Drawing.Point(143, 72);
+            this.cbxItemUnit.Location = new System.Drawing.Point(143, 78);
             this.cbxItemUnit.Name = "cbxItemUnit";
-            this.cbxItemUnit.Size = new System.Drawing.Size(257, 20);
+            this.cbxItemUnit.Size = new System.Drawing.Size(257, 21);
             this.cbxItemUnit.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(34, 68);
+            this.label5.Location = new System.Drawing.Point(34, 74);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 23);
+            this.label5.Size = new System.Drawing.Size(100, 25);
             this.label5.TabIndex = 23;
             this.label5.Text = "Item Unit:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -173,26 +173,26 @@
             // 
             this.cbxItemType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxItemType.FormattingEnabled = true;
-            this.cbxItemType.Location = new System.Drawing.Point(143, 40);
+            this.cbxItemType.Location = new System.Drawing.Point(143, 43);
             this.cbxItemType.Name = "cbxItemType";
-            this.cbxItemType.Size = new System.Drawing.Size(257, 20);
+            this.cbxItemType.Size = new System.Drawing.Size(257, 21);
             this.cbxItemType.TabIndex = 24;
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(34, 36);
+            this.label6.Location = new System.Drawing.Point(34, 39);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 23);
+            this.label6.Size = new System.Drawing.Size(100, 25);
             this.label6.TabIndex = 25;
             this.label6.Text = "Item Type:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Item
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 267);
+            this.ClientSize = new System.Drawing.Size(425, 289);
             this.Controls.Add(this.cbxItemType);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbxItemUnit);
@@ -208,7 +208,7 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Item";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Item";

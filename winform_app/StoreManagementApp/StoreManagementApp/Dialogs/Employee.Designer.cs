@@ -45,7 +45,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dtpBirthDay = new System.Windows.Forms.DateTimePicker();
+            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.cbxStore = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -226,12 +226,12 @@
             this.label8.Text = "Province:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // dtpBirthDay
+            // dtpBirthday
             // 
-            this.dtpBirthDay.Location = new System.Drawing.Point(129, 163);
-            this.dtpBirthDay.Name = "dtpBirthDay";
-            this.dtpBirthDay.Size = new System.Drawing.Size(257, 20);
-            this.dtpBirthDay.TabIndex = 5;
+            this.dtpBirthday.Location = new System.Drawing.Point(129, 163);
+            this.dtpBirthday.Name = "dtpBirthday";
+            this.dtpBirthday.Size = new System.Drawing.Size(257, 20);
+            this.dtpBirthday.TabIndex = 5;
             // 
             // label7
             // 
@@ -412,7 +412,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbxStore);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dtpBirthDay);
+            this.Controls.Add(this.dtpBirthday);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbxDetails);
             this.Controls.Add(this.cbxWard);
@@ -431,7 +431,7 @@
             this.Controls.Add(this.tbxPhoneNumber);
             this.Controls.Add(this.tbxEmployeeName);
             this.Controls.Add(this.lblTitle);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Employee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee";
@@ -460,7 +460,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dtpBirthDay;
+        private System.Windows.Forms.DateTimePicker dtpBirthday;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbxStore;
         private System.Windows.Forms.Label label4;

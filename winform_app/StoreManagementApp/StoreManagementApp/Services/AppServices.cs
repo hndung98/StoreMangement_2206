@@ -55,24 +55,56 @@ namespace StoreManagementApp.Services
             return lst;
         }
 
-        public List<string> GetManagers()
+        public List<IdName> GetIdName(string tableName, string conditionField, string conditionValue, string fId, string fName)
         {
-            var lstManagers = new List<string>();
-            lstManagers.Add("HN Dung - 1");
-            lstManagers.Add("HN Hung - 5");
-            lstManagers.Add("HN Phat - 12");
 
-            return lstManagers;
+            string query = String.Format("SELECT * FROM {0} WHERE {1} = N'{2}'", tableName, conditionField, conditionValue);
+
+            DataTable dataTable = new DataTable();
+
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dataTable);
+
+            da.Dispose();
+
+            List<IdName> lst = dataTable.AsEnumerable().Select(x => new IdName(x.Field<int>(fId), x.Field<string>(fName))).ToList();
+
+            return lst;
         }
-        public List<string> GetStores()
+
+        public List<IdName> GetIdName(string tableName, string fId, string fName)
         {
-            var lstStores = new List<string>();
-            lstStores.Add("Store 1 - 1");
-            lstStores.Add("Store 2 - 2");
-            lstStores.Add("Store 3 - 3");
 
-            return lstStores;
+            string query = String.Format("SELECT * FROM {0}", tableName);
+
+            DataTable dataTable = new DataTable();
+
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dataTable);
+
+            da.Dispose();
+
+            List<IdName> lst = dataTable.AsEnumerable().Select(x => new IdName(x.Field<int>(fId), x.Field<string>(fName))).ToList();
+
+            return lst;
         }
+
+        public List<IdName> GetStores()
+        {
+            return GetIdName("TBL_Store", "StoreID", "StoreName");
+        }
+
+        public List<IdName> GetEmployeeByStore(string StoreId)
+        {
+            return GetIdName("TBL_Employee", "StoreId", StoreId, "EmployeeID", "EmployeeName");
+        }
+
         public List<string> GetEmployeeTypes()
         {
             var lstTypes = new List<string>();
@@ -147,6 +179,18 @@ namespace StoreManagementApp.Services
             this.name = name;
         }
         public Byte value;
+        public string name;
+    }
+
+    public class IdName
+    {
+        public IdName() { }
+        public IdName(int id, string name)
+        {
+            this.id = id;
+            this.name = name;
+        }
+        public int id;
         public string name;
     }
 }

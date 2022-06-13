@@ -8,7 +8,23 @@ namespace StoreManagementApp.Dialogs
     public partial class Employee : Form
     {
         public string Title = "";
-        public List<ControlGroup> lstManagers = new List<ControlGroup>();
+        public string Store = "";
+        public string EmployeeType = "";
+        public string EmployeeName = "";
+        public string Gender = "";
+        public string Birthday = "";
+        public string PhoneNumber = "";
+        public string StartingDate = "";
+        public string Salary = "";
+        public string Username = "";
+        public string Password = "";
+        public string Email = "";
+        public string Province = "";
+        public string District = "";
+        public string Ward = "";
+        public string Details = "";
+
+        public List<IdName> lstStores = new List<IdName>();
         public List<ControlGroup> lstProvinces = new List<ControlGroup>();
         public List<ControlGroup> lstDistricts = new List<ControlGroup>();
         public List<ControlGroup> lstWards = new List<ControlGroup>();
@@ -21,6 +37,9 @@ namespace StoreManagementApp.Dialogs
 
         public void setInfo()
         {
+            lblTitle.Text = Title;
+
+            lstStores = services.GetStores();
         }
 
         private void Employee_Load(object sender, EventArgs e)

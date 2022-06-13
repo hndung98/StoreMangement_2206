@@ -43,7 +43,7 @@ namespace StoreManagementApp.Dialogs
 
             foreach (var item in lstManagers)
             {
-                cbxManager.Items.Add(item);
+                //cbxManager.Items.Add(item);
             }
             foreach (var item in lstProvinces)
             {
