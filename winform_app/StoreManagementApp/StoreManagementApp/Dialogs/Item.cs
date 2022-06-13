@@ -14,10 +14,16 @@ namespace StoreManagementApp.Dialogs
     public partial class Item : Form
     {
         public string Title = "";
-        public List<ControlGroup> lstManagers = new List<ControlGroup>();
-        public List<ControlGroup> lstProvinces = new List<ControlGroup>();
-        public List<ControlGroup> lstDistricts = new List<ControlGroup>();
-        public List<ControlGroup> lstWards = new List<ControlGroup>();
+        public string ItemType = "";
+        public string ItemUnit = "";
+        public string ItemName = "";
+        public string Supplier = "";
+        public string Cost = "";
+        public string SuggestedPrice = "";
+
+        public List<ControlGroup> lstItemTypes = new List<ControlGroup>();
+        public List<ControlGroup> lstItemUnits = new List<ControlGroup>();
+        public List<ControlGroup> lstSuppliers = new List<ControlGroup>();
 
         public AppServices services;
 
@@ -28,6 +34,11 @@ namespace StoreManagementApp.Dialogs
 
         public void setInfo()
         {
+            lblTitle.Text = Title;
+            tbxItemName.Text = ItemName;
+
+            lstItemTypes = services.GetControls("ItemType");
+            lstItemUnits = services.GetControls("ItemUnit");
         }
 
         private void btnOK_Click(object sender, EventArgs e)

@@ -39,13 +39,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbxItemName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbxItemType = new System.Windows.Forms.ComboBox();
+            this.cbxItemUnit = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.cbxItemType = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(220, 189);
+            this.btnCancel.Location = new System.Drawing.Point(220, 221);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(115, 29);
             this.btnCancel.TabIndex = 7;
@@ -55,7 +57,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(86, 189);
+            this.btnOK.Location = new System.Drawing.Point(86, 221);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(115, 29);
             this.btnOK.TabIndex = 6;
@@ -77,14 +79,14 @@
             // 
             this.cbxSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSupplier.FormattingEnabled = true;
-            this.cbxSupplier.Location = new System.Drawing.Point(143, 97);
+            this.cbxSupplier.Location = new System.Drawing.Point(143, 129);
             this.cbxSupplier.Name = "cbxSupplier";
             this.cbxSupplier.Size = new System.Drawing.Size(257, 20);
             this.cbxSupplier.TabIndex = 3;
             // 
             // tbxCost
             // 
-            this.tbxCost.Location = new System.Drawing.Point(143, 124);
+            this.tbxCost.Location = new System.Drawing.Point(143, 156);
             this.tbxCost.MaxLength = 15;
             this.tbxCost.Name = "tbxCost";
             this.tbxCost.Size = new System.Drawing.Size(257, 19);
@@ -93,7 +95,7 @@
             // 
             // tbxSuggestedPrice
             // 
-            this.tbxSuggestedPrice.Location = new System.Drawing.Point(143, 152);
+            this.tbxSuggestedPrice.Location = new System.Drawing.Point(143, 184);
             this.tbxSuggestedPrice.MaxLength = 15;
             this.tbxSuggestedPrice.Name = "tbxSuggestedPrice";
             this.tbxSuggestedPrice.Size = new System.Drawing.Size(257, 19);
@@ -103,7 +105,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(34, 149);
+            this.label4.Location = new System.Drawing.Point(34, 181);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 23);
             this.label4.TabIndex = 19;
@@ -113,7 +115,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(34, 119);
+            this.label3.Location = new System.Drawing.Point(34, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 23);
             this.label3.TabIndex = 18;
@@ -123,7 +125,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(34, 92);
+            this.label2.Location = new System.Drawing.Point(34, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 23);
             this.label2.TabIndex = 17;
@@ -132,7 +134,7 @@
             // 
             // tbxItemName
             // 
-            this.tbxItemName.Location = new System.Drawing.Point(143, 69);
+            this.tbxItemName.Location = new System.Drawing.Point(143, 101);
             this.tbxItemName.MaxLength = 50;
             this.tbxItemName.Name = "tbxItemName";
             this.tbxItemName.Size = new System.Drawing.Size(257, 19);
@@ -141,12 +143,31 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(34, 66);
+            this.label1.Location = new System.Drawing.Point(34, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 15;
             this.label1.Text = "Item Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cbxItemUnit
+            // 
+            this.cbxItemUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxItemUnit.FormattingEnabled = true;
+            this.cbxItemUnit.Location = new System.Drawing.Point(143, 72);
+            this.cbxItemUnit.Name = "cbxItemUnit";
+            this.cbxItemUnit.Size = new System.Drawing.Size(257, 20);
+            this.cbxItemUnit.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.Location = new System.Drawing.Point(34, 68);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 23);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Item Unit:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cbxItemType
             // 
@@ -155,24 +176,26 @@
             this.cbxItemType.Location = new System.Drawing.Point(143, 40);
             this.cbxItemType.Name = "cbxItemType";
             this.cbxItemType.Size = new System.Drawing.Size(257, 20);
-            this.cbxItemType.TabIndex = 1;
+            this.cbxItemType.TabIndex = 24;
             // 
-            // label5
+            // label6
             // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(34, 36);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 23);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Item Type:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label6.Location = new System.Drawing.Point(34, 36);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 23);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "Item Type:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Item
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 236);
+            this.ClientSize = new System.Drawing.Size(425, 267);
             this.Controls.Add(this.cbxItemType);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cbxItemUnit);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbxSupplier);
             this.Controls.Add(this.tbxCost);
@@ -207,7 +230,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbxItemName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbxItemType;
+        private System.Windows.Forms.ComboBox cbxItemUnit;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbxItemType;
+        private System.Windows.Forms.Label label6;
     }
 }
