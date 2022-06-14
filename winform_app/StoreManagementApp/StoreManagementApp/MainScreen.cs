@@ -60,36 +60,48 @@ namespace StoreManagementApp
                 var res = dialog.DialogResult;
                 if (res == DialogResult.OK)
                 {
-                    MessageBox.Show(dialog.data.StoreName + dialog.data.PhoneNumber + dialog.data.RentalCost);
+                    //MessageBox.Show(dialog.data.StoreName + dialog.data.PhoneNumber + dialog.data.RentalCost);
                 }
                 else if (res == DialogResult.Cancel)
                 {
-                    MessageBox.Show("Cancel");
+                    //MessageBox.Show("Cancel");
                 }
             }
         }
 
         private void btnEditStore_Click(object sender, EventArgs e)
         {
-            using (Store dialog = new Store())
+            if (dgvStoreInquiry.SelectedRows.Count > 0)
             {
-                dialog.mode = 2;
-                dialog.Title = "Cập nhật cửa hàng";
-                dialog.data.StoreName = "Quan An 1";
-                dialog.data.PhoneNumber = "035 777 2123";
-                dialog.data.RentalCost = "10 000 000";
-
-                dialog.services = services;
-                dialog.setInfo();
-                dialog.ShowDialog();
-
-                var res = dialog.DialogResult;
-                if (res == DialogResult.OK)
+                var cells = dgvStoreInquiry.SelectedRows[0].Cells;
+                using (Store dialog = new Store())
                 {
-                }
-                else if (res == DialogResult.Cancel)
-                {
-                    MessageBox.Show("Cancel");
+                    dialog.mode = 2;
+                    dialog.Title = "Cập nhật cửa hàng";
+                    dialog.data.StoreName = (string)cells[1].FormattedValue;
+                    dialog.data.PhoneNumber = (string)cells[2].FormattedValue;
+                    dialog.data.Email = (string)cells[3].FormattedValue;
+                    dialog.data.Manager = (string)cells[4].FormattedValue;
+                    dialog.data.RentalCost = (string)cells[5].FormattedValue;
+                    dialog.data.OpenningDate = (string)cells[6].FormattedValue;
+                    dialog.data.ClosingDate = (string)cells[7].FormattedValue;
+                    dialog.data.Province = (string)cells[8].FormattedValue;
+                    dialog.data.District = (string)cells[9].FormattedValue;
+                    dialog.data.Ward = (string)cells[10].FormattedValue;
+                    dialog.data.Details = (string)cells[11].FormattedValue;
+
+                    dialog.services = services;
+                    dialog.setInfo();
+                    dialog.ShowDialog();
+
+                    var res = dialog.DialogResult;
+                    if (res == DialogResult.OK)
+                    {
+                    }
+                    else if (res == DialogResult.Cancel)
+                    {
+                        MessageBox.Show("Cancel");
+                    }
                 }
             }
         }

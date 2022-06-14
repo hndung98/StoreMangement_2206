@@ -26,7 +26,8 @@ CREATE TABLE TBL_Supplier
 	Details				NVARCHAR(50) NULL,
 
 	PRIMARY KEY (SupplierID),
-	UNIQUE (Email, PhoneNumber)
+	UNIQUE (Email),
+	UNIQUE (PhoneNumber)
 );	
 
 CREATE TABLE TBL_Shipper
@@ -41,7 +42,8 @@ CREATE TABLE TBL_Shipper
 	Details				NVARCHAR(50) NULL,
 
 	PRIMARY KEY (ShipperID),
-	UNIQUE (Email, PhoneNumber)
+	UNIQUE (Email),
+	UNIQUE (PhoneNumber)
 );
 
 CREATE TABLE TBL_Voucher
@@ -88,7 +90,8 @@ CREATE TABLE TBL_Store
 	Details				NVARCHAR(50) NULL,
 
 	PRIMARY KEY (StoreID),
-	UNIQUE (PhoneNumber, Email),
+	UNIQUE (Email),
+	UNIQUE (PhoneNumber)
 );
 
 CREATE TABLE TBL_Item
@@ -138,7 +141,8 @@ CREATE TABLE TBL_Employee
 
 	PRIMARY KEY (EmployeeID),
 	FOREIGN KEY (StoreID) REFERENCES TBL_Store(StoreID),
-	UNIQUE(PhoneNumber, Username)
+	UNIQUE(PhoneNumber),
+	UNIQUE(Username)
 );
 
 CREATE TABLE TBL_WorkHour

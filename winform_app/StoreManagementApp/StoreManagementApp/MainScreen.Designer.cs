@@ -62,7 +62,7 @@
             this.btnDeleteEmployee = new System.Windows.Forms.Button();
             this.btnEditEmployee = new System.Windows.Forms.Button();
             this.btnAddEmployee = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvEmployeeInquiry = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabStore.SuspendLayout();
@@ -74,7 +74,7 @@
             this.tabCustomer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerInquiry)).BeginInit();
             this.tabEmployee.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeInquiry)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -463,7 +463,7 @@
             this.tabEmployee.Controls.Add(this.btnDeleteEmployee);
             this.tabEmployee.Controls.Add(this.btnEditEmployee);
             this.tabEmployee.Controls.Add(this.btnAddEmployee);
-            this.tabEmployee.Controls.Add(this.dataGridView1);
+            this.tabEmployee.Controls.Add(this.dgvEmployeeInquiry);
             this.tabEmployee.Controls.Add(this.label4);
             this.tabEmployee.Location = new System.Drawing.Point(4, 22);
             this.tabEmployee.Name = "tabEmployee";
@@ -521,19 +521,19 @@
             this.btnAddEmployee.UseVisualStyleBackColor = false;
             this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
-            // dataGridView1
+            // dgvEmployeeInquiry
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGray;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 31);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(724, 300);
-            this.dataGridView1.TabIndex = 13;
+            this.dgvEmployeeInquiry.AllowUserToAddRows = false;
+            this.dgvEmployeeInquiry.AllowUserToDeleteRows = false;
+            this.dgvEmployeeInquiry.AllowUserToResizeRows = false;
+            this.dgvEmployeeInquiry.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dgvEmployeeInquiry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmployeeInquiry.Location = new System.Drawing.Point(6, 31);
+            this.dgvEmployeeInquiry.MultiSelect = false;
+            this.dgvEmployeeInquiry.Name = "dgvEmployeeInquiry";
+            this.dgvEmployeeInquiry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEmployeeInquiry.Size = new System.Drawing.Size(724, 300);
+            this.dgvEmployeeInquiry.TabIndex = 13;
             // 
             // label4
             // 
@@ -572,7 +572,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerInquiry)).EndInit();
             this.tabEmployee.ResumeLayout(false);
             this.tabEmployee.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeInquiry)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -603,7 +603,7 @@
         private System.Windows.Forms.Button btnReloadItem;
         private System.Windows.Forms.Button btnReloadCustomer;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvEmployeeInquiry;
         private System.Windows.Forms.Button btnDeleteEmployee;
         private System.Windows.Forms.Button btnEditEmployee;
         private System.Windows.Forms.Button btnAddEmployee;

@@ -106,26 +106,66 @@ namespace StoreManagementApp.Services
             return GetIdName("TBL_Employee", "StoreId", StoreId, "EmployeeID", "EmployeeName");
         }
 
-        public int AddStore(StoreData data)
+        public string AddStore(StoreData data)
         {
-            SqlCommand cmd = new SqlCommand("addStore", conn);
+            string msg = "";
+            try
+            {
+                string query = String.Format("DECLARE @msg as nvarchar(100)\n" +
+                    "EXECUTE [dbo].[addStore] " +
+                    "{0}, {1}, {2}, {3}, {4}, {5}, '{6}', {7}, {8}, {9}, {10}," +
+                    "@msg OUTPUT \n"+
+                    "SELECT @msg as msg"
+                    , data.StoreName
+                    , data.PhoneNumber
+                    , data.Email
+                    , data.Manager
+                    , data.RentalCost
+                    , data.OpenningDate
+                    , data.ClosingDate
+                    , data.Province
+                    , data.District
+                    , data.Ward
+                    , data.Details);
 
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@StoreName", data.StoreName);
-            cmd.Parameters.AddWithValue("@PhoneNumber", data.PhoneNumber);
-            cmd.Parameters.AddWithValue("@Email", data.Email);
-            cmd.Parameters.AddWithValue("@ManagerID", data.Manager);
-            cmd.Parameters.AddWithValue("@RentalCost", data.RentalCost);
-            cmd.Parameters.AddWithValue("@OpenningDate", data.OpenningDate);
-            cmd.Parameters.AddWithValue("@ClosingDate", data.ClosingDate);
-            cmd.Parameters.AddWithValue("@Province", data.Province);
-            cmd.Parameters.AddWithValue("@District", data.District);
-            cmd.Parameters.AddWithValue("@Ward", data.Ward);
-            cmd.Parameters.AddWithValue("@Details", data.Details);
+                DataTable dataTable = new DataTable();
 
-            int rowAffected = cmd.ExecuteNonQuery();
+                SqlCommand cmd = new SqlCommand(query, conn);
 
-            return rowAffected;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                da.Fill(dataTable);
+
+                da.Dispose();
+
+                List<IdName> lst = dataTable.AsEnumerable().Select(x => new IdName(1, x.Field<string>("msg"))).ToList();
+                msg = lst[0].name;
+                //SqlCommand cmd = new SqlCommand("addStore", conn);
+
+                //cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.AddWithValue("@StoreName", data.StoreName);
+                //cmd.Parameters.AddWithValue("@PhoneNumber", data.PhoneNumber);
+                //cmd.Parameters.AddWithValue("@Email", data.Email);
+                //cmd.Parameters.AddWithValue("@ManagerID", data.Manager);
+                //cmd.Parameters.AddWithValue("@RentalCost", data.RentalCost);
+                //cmd.Parameters.AddWithValue("@OpenningDate", data.OpenningDate);
+                //cmd.Parameters.AddWithValue("@ClosingDate", data.ClosingDate);
+                //cmd.Parameters.AddWithValue("@Province", data.Province);
+                //cmd.Parameters.AddWithValue("@District", data.District);
+                //cmd.Parameters.AddWithValue("@Ward", data.Ward);
+                //cmd.Parameters.AddWithValue("@Details", data.Details);
+
+                //var result = cmd.Parameters.AddWithValue("@MessageResult", msg);
+                
+                //int rowAffected = cmd.ExecuteNonQuery();
+                
+                return msg;
+            }
+            catch (Exception err)
+            {
+                msg = err.Message;
+                return msg;
+            }
         }
 
         public static bool IsValidEmail(string email)

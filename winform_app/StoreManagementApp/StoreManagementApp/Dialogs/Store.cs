@@ -30,6 +30,13 @@ namespace StoreManagementApp.Dialogs
             tbxStoreName.Text = data.StoreName;
             tbxPhoneNumber.Text = data.PhoneNumber;
             tbxRentalCost.Text = data.RentalCost;
+            tbxEmail.Text = data.Email;
+            dtpOpenningDate.Text = data.OpenningDate;
+            dtpClosingDate.ShowCheckBox = true;
+            tbxDetails.Text = data.Details;
+
+            dtpOpenningDate.MinDate = new DateTime(DateTime.Now.Year, 01, 01);
+            dtpOpenningDate.MaxDate = new DateTime(DateTime.Now.Year, 12, 31);
 
             lstProvinces = services.GetControls("Province");
             lstManagers = services.GetEmployeeByStore("1");
@@ -44,6 +51,8 @@ namespace StoreManagementApp.Dialogs
             else
             {
                 cbxManager.Enabled = false;
+                dtpClosingDate.Value = new DateTime(2900, 12, 31);
+                dtpClosingDate.Enabled = false;
             }
             foreach (var item in lstProvinces)
             {
@@ -81,17 +90,26 @@ namespace StoreManagementApp.Dialogs
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            data.StoreName = string.IsNullOrEmpty(tbxStoreName.Text) ? null : tbxStoreName.Text;
-            data.PhoneNumber = string.IsNullOrEmpty(tbxPhoneNumber.Text) ? null : tbxPhoneNumber.Text;
-            data.Email = string.IsNullOrEmpty(tbxEmail.Text) ? null : tbxEmail.Text;
+            if (dtpClosingDate.ShowCheckBox == true && dtpClosingDate.Checked == true)
+            {
+                data.ClosingDate = dtpClosingDate.Text;
+            }
+            else
+            {
+                data.ClosingDate = "''";
+            }
+            MessageBox.Show(dtpClosingDate.Text);
+            return;
+            data.StoreName = string.IsNullOrEmpty(tbxStoreName.Text) ? "''" : tbxStoreName.Text;
+            data.PhoneNumber = string.IsNullOrEmpty(tbxPhoneNumber.Text) ? "0" : tbxPhoneNumber.Text;
+            data.Email = string.IsNullOrEmpty(tbxEmail.Text) ? "''" : tbxEmail.Text;
             data.Manager = string.IsNullOrEmpty(cbxManager.Text) ? "0" : cbxManager.Text;
-            data.RentalCost = string.IsNullOrEmpty(tbxRentalCost.Text) ? null : tbxRentalCost.Text;
-            data.OpenningDate = string.IsNullOrEmpty(dtpOpenningDate.Text) ? null : dtpOpenningDate.Text;
-            data.ClosingDate = string.IsNullOrEmpty(dtpClosingDate.Text) ? null : dtpClosingDate.Text;
-            data.Province = string.IsNullOrEmpty(cbxProvince.Text) ? string.Empty : cbxProvince.Text.Replace(" - ","-").Split('-')[1];
-            data.District = string.IsNullOrEmpty(cbxDistrict.Text) ? string.Empty : cbxDistrict.Text.Replace(" - ", "-").Split('-')[1];
-            data.Ward = string.IsNullOrEmpty(cbxWard.Text) ? string.Empty : cbxWard.Text.Replace(" - ", "-").Split('-')[1];
-            data.Details = string.IsNullOrEmpty(tbxDetails.Text) ? null : tbxDetails.Text;
+            data.RentalCost = string.IsNullOrEmpty(tbxRentalCost.Text) ? "0" : tbxRentalCost.Text;
+            data.OpenningDate = string.IsNullOrEmpty(dtpOpenningDate.Text) ? "''" : dtpOpenningDate.Text;
+            data.Province = string.IsNullOrEmpty(cbxProvince.Text) ? "0" : cbxProvince.Text.Replace(" - ","-").Split('-')[1];
+            data.District = string.IsNullOrEmpty(cbxDistrict.Text) ? "0" : cbxDistrict.Text.Replace(" - ", "-").Split('-')[1];
+            data.Ward = string.IsNullOrEmpty(cbxWard.Text) ? "0" : cbxWard.Text.Replace(" - ", "-").Split('-')[1];
+            data.Details = string.IsNullOrEmpty(tbxDetails.Text) ? "''" : tbxDetails.Text;
 
             //MessageBox.Show(
             //    "StoreName: <" + data.StoreName + ">\n" +
@@ -108,11 +126,11 @@ namespace StoreManagementApp.Dialogs
             //    ""
             //    );
 
-            int rowAffected = services.AddStore(data);
+            string msg = services.AddStore(data);
 
-            MessageBox.Show(rowAffected + "....");
+            MessageBox.Show(msg);
 
-            this.DialogResult = DialogResult.OK;
+            //this.DialogResult = DialogResult.OK;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

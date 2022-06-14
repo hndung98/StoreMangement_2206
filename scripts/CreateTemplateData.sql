@@ -48,7 +48,9 @@ INSERT INTO TBL_Control
 INSERT INTO TBL_Control
      VALUES ( N'SalesStatus', 3, N'Đã hủy')
 
-
+	 
+INSERT INTO TBL_Control
+     VALUES ( N'Province', 0, N'<Chọn thành phố>')
 INSERT INTO TBL_Control
      VALUES ( N'Province', 1, N'TP Hồ Chí Minh')
 INSERT INTO TBL_Control
