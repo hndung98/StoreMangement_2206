@@ -1,4 +1,12 @@
-CREATE PROCEDURE [dbo].[addStore](
+--IF EXISTS ( SELECT * 
+--            FROM   sysobjects 
+--            WHERE  id = object_id(N'[dbo].[addStore]') 
+--                   and OBJECTPROPERTY(id, N'IsProcedure') = 1 )
+--BEGIN
+--    DROP PROCEDURE [dbo].[addStore]
+--END
+
+CREATE OR ALTER PROCEDURE [dbo].[addStore](
 @StoreName AS nvarchar(50),
 @PhoneNumber AS int,
 @Email AS nvarchar(50),
@@ -43,10 +51,17 @@ BEGIN
 			AND CHARINDEX('..',@Email) = 0
 			AND @Email NOT LIKE '%@%@%'
 		BEGIN
-			IF @ManagerID is not null and @ManagerID not in (SELECT EmployeeID FROM TBL_Employee)
+			IF @ManagerID is not null
 			BEGIN
-				SET	@allow = 0
-				print 'ManagerID is invalid.'
+				IF @ManagerID = 0
+				BEGIN
+					SET @ManagerID = null
+				END
+				ELSE IF @ManagerID not in (SELECT EmployeeID FROM TBL_Employee)
+				BEGIN
+					SET	@allow = 0
+					print 'ManagerID is invalid.'
+				END
 			END
 			ELSE IF @PhoneNumber in (SELECT PhoneNumber FROM TBL_Store)
 			BEGIN
@@ -104,16 +119,16 @@ BEGIN
 			@Details
 		)
 	END
-END--EXECUTE @RC = [dbo].[addStore] 
---   N'ABC Store'
---  , 909121335
---  , 'hdung.222@gmail.com'
---  , 1
---  , 11000000
---  , '2022-06-01'
---  , null
---  , 1
---  , 1
---  , 3
---  , null
---GO
+END/*EXECUTE [dbo].[addStore] 
+   N'ABC Store'
+  , 909121335
+  , 'hdung.222@gmail.com'
+  , null
+  , 11000000
+  , '2022-06-01'
+  , null
+  , 1
+  , 1
+  , 3
+  , null
+GO*/

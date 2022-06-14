@@ -90,25 +90,25 @@ INSERT INTO TBL_Supplier
 
 
 INSERT INTO TBL_Item
-     VALUES (1, 1, 6, N'Mì tôm hảo hảo', 3000, 5000)
+     VALUES (1, 6, 1, N'Mì tôm hảo hảo', 3000, 5000)
 INSERT INTO TBL_Item
-     VALUES (2, 1, 3, N'Cocacola lon 330ml', 9200, 12000)
+     VALUES (2, 3, 1, N'Cocacola lon 330ml', 9200, 12000)
 INSERT INTO TBL_Item
-     VALUES (2, 1, 3, N'Pepsi lon 330', 9000, 12000)
+     VALUES (2, 3, 1, N'Pepsi lon 330', 9000, 12000)
 INSERT INTO TBL_Item
-     VALUES (1, 1, 5, N'Xúc xích heo vissan', 18000, 22000)
+     VALUES (1, 5, 1, N'Xúc xích heo vissan', 18000, 22000)
 INSERT INTO TBL_Item
-     VALUES (1, 1, 2, N'Cá viên hộp', 29000, 33000)
+     VALUES (1, 2, 1, N'Cá viên hộp', 29000, 33000)
 INSERT INTO TBL_Item
-     VALUES (1, 1, 2, N'Khô gà', 53000, 61000)
+     VALUES (1, 2, 1, N'Khô gà', 53000, 61000)
 INSERT INTO TBL_Item
-     VALUES (1, 1, 2, N'Khô bò', 130000, 150000)
+     VALUES (1, 2, 1, N'Khô bò', 130000, 150000)
 INSERT INTO TBL_Item
-     VALUES (2, 1, 4, N'Nước ép cam', 10000, 12000)
+     VALUES (2, 4, 1, N'Nước ép cam', 10000, 12000)
 INSERT INTO TBL_Item
-     VALUES (2, 1, 4, N'Nước ép vải', 10000, 12000)
+     VALUES (2, 4, 1, N'Nước ép vải', 10000, 12000)
 INSERT INTO TBL_Item
-     VALUES (2, 1, 4, N'Trà đào', 9000, 11000)
+     VALUES (2, 4, 1, N'Trà đào', 9000, 11000)
 
 
 INSERT INTO [dbo].[TBL_StoreItem]
@@ -165,29 +165,29 @@ INSERT INTO [dbo].[TBL_Inventory]
      VALUES (2, 6, 50, 10)
 
 INSERT INTO TBL_Employee
-     VALUES (2, N'Nguyễn Văn A', '1994-07-02', 1, 0905110402, '2022-05-02', 1, 56000, 'user1', 'pass1', 1, 1, 1, N'192 Lê Văn Sỹ')
+     VALUES (2, N'Nguyễn Văn A', '1994-07-02', 1, 0905110402, null, '2022-05-02', 1, 56000, 'user1', 'pass1', 1, 1, 1, N'192 Lê Văn Sỹ')
 INSERT INTO TBL_Employee
-     VALUES (2, N'Trần Văn B', '1996-03-22', 1, 0905036402, '2022-06-02', 1, 25000, 'user2', 'pass2', 1, 1, 2, N'192 Lê Văn Sỹ')
+     VALUES (2, N'Trần Văn B', '1996-03-22', 1, 0905036402, null, '2022-06-02', 1, 25000, 'user2', 'pass2', 1, 1, 2, N'192 Lê Văn Sỹ')
 INSERT INTO TBL_Employee
-     VALUES (2, N'Lê Văn C', '1997-01-02', 1, 0905016632, '2022-06-02', 1, 27000, 'user3', 'pass3', 1, 1, 3, N'192 Lê Văn Sỹ')
+     VALUES (2, N'Lê Văn C', '1997-01-02', 1, 0905016632, null, '2022-06-02', 1, 27000, 'user3', 'pass3', 1, 1, 3, N'192 Lê Văn Sỹ')
 INSERT INTO TBL_Employee
-     VALUES (2, N'Lê Văn X', '1997-01-02', 1, 0905016632, '2022-06-02', 1, 26000, 'user4', 'pass4', 1, 1, 3, N'192 Lê Văn Sỹ')
+     VALUES (2, N'Lê Văn X', '1997-01-02', 1, 0905016632, null, '2022-06-02', 1, 26000, 'user4', 'pass4', 1, 1, 3, N'192 Lê Văn Sỹ')
 INSERT INTO TBL_Employee
-     VALUES (3, N'Nguyễn Văn D', '1994-07-02', 1, 0905110402, '2022-05-02', 1, 55000, 'user5', 'pass5', 1, 1, 1, N'192 Lê Văn Sỹ')
+     VALUES (3, N'Nguyễn Văn D', '1994-07-02', 1, 0905110402, null, '2022-05-02', 1, 55000, 'user5', 'pass5', 1, 1, 1, N'192 Lê Văn Sỹ')
 INSERT INTO TBL_Employee
-     VALUES (3, N'Trần Văn E', '1996-03-22', 1, 0905036402, '2022-06-02', 1, 27000, 'user6', 'pass6', 1, 1, 2, N'192 Lê Văn Sỹ')
+     VALUES (3, N'Trần Văn E', '1996-03-22', 1, 0905036402, null, '2022-06-02', 1, 27000, 'user6', 'pass6', 1, 1, 2, N'192 Lê Văn Sỹ')
 INSERT INTO TBL_Employee
-     VALUES (3, N'Lê Văn F', '1997-01-02', 1, 0905016632, '2022-06-02', 1, 26000, 'user7', 'pass7', 1, 1, 3, N'192 Lê Văn Sỹ')
+     VALUES (3, N'Lê Văn F', '1997-01-02', 1, 0905016632, null, '2022-06-02', 1, 26000, 'user7', 'pass7', 1, 1, 3, N'192 Lê Văn Sỹ')
 INSERT INTO TBL_Employee
-     VALUES (3, N'Lê Văn G', '1997-01-02', 1, 0905016632, '2022-06-02', 1, 26000, 'user8', 'pass8', 1, 1, 3, N'192 Lê Văn Sỹ')
+     VALUES (3, N'Lê Văn G', '1997-01-02', 1, 0905016632, null, '2022-06-02', 1, 26000, 'user8', 'pass8', 1, 1, 3, N'192 Lê Văn Sỹ')
 INSERT INTO TBL_Employee
-     VALUES (1, N'Nguyễn Văn D', '1994-07-02', 1, 0905110402, '2022-05-02', 1, 54000, 'user9', 'pass9', 1, 1, 1, N'192 Lê Văn Sỹ')
+     VALUES (1, N'Nguyễn Văn D', '1994-07-02', 1, 0905110402, null, '2022-05-02', 1, 54000, 'user9', 'pass9', 1, 1, 1, N'192 Lê Văn Sỹ')
 INSERT INTO TBL_Employee
-     VALUES (1, N'Trần Văn E', '1996-03-22', 1, 0905036402, '2022-06-02', 1, 27000, 'user10', 'pass10', 1, 1, 2, N'192 Lê Văn Sỹ')
+     VALUES (1, N'Trần Văn E', '1996-03-22', 1, 0905036402, null, '2022-06-02', 1, 27000, 'user10', 'pass10', 1, 1, 2, N'192 Lê Văn Sỹ')
 INSERT INTO TBL_Employee
-     VALUES (1, N'Lê Văn F', '1997-01-02', 1, 0905016632, '2022-06-02', 1, 26000, 'user11', 'pass11', 1, 1, 3, N'192 Lê Văn Sỹ')
+     VALUES (1, N'Lê Văn F', '1997-01-02', 1, 0905016632, null, '2022-06-02', 1, 26000, 'user11', 'pass11', 1, 1, 3, N'192 Lê Văn Sỹ')
 INSERT INTO TBL_Employee
-     VALUES (1, N'Lê Văn G', '1997-01-02', 1, 0905016632, '2022-06-02', 1, 26000, 'user12', 'pass12', 1, 1, 3, N'192 Lê Văn Sỹ')
+     VALUES (1, N'Lê Văn G', '1997-01-02', 1, 0905016632, null, '2022-06-02', 1, 26000, 'user12', 'pass12', 1, 1, 3, N'192 Lê Văn Sỹ')
 
 	 
 INSERT INTO TBL_Customer

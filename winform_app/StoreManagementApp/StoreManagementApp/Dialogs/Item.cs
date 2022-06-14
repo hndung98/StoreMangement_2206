@@ -13,6 +13,7 @@ namespace StoreManagementApp.Dialogs
 {
     public partial class Item : Form
     {
+        public byte mode = 0; // Add = 1, Edit = 2
         public string Title = "";
         public string ItemType = "";
         public string ItemUnit = "";

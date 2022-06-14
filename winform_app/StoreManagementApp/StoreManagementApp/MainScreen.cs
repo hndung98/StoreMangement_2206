@@ -50,6 +50,7 @@ namespace StoreManagementApp
         {
             using (Store dialog = new Store())
             {
+                dialog.mode = 1;
                 dialog.Title = "Thêm cửa hàng";
 
                 dialog.services = services;
@@ -59,7 +60,7 @@ namespace StoreManagementApp
                 var res = dialog.DialogResult;
                 if (res == DialogResult.OK)
                 {
-                    MessageBox.Show(dialog.StoreName + dialog.PhoneNumber + dialog.RentalCost);
+                    MessageBox.Show(dialog.data.StoreName + dialog.data.PhoneNumber + dialog.data.RentalCost);
                 }
                 else if (res == DialogResult.Cancel)
                 {
@@ -72,10 +73,11 @@ namespace StoreManagementApp
         {
             using (Store dialog = new Store())
             {
+                dialog.mode = 2;
                 dialog.Title = "Cập nhật cửa hàng";
-                dialog.StoreName = "Quan An 1";
-                dialog.PhoneNumber = "035 777 2123";
-                dialog.RentalCost = "10 000 000";
+                dialog.data.StoreName = "Quan An 1";
+                dialog.data.PhoneNumber = "035 777 2123";
+                dialog.data.RentalCost = "10 000 000";
 
                 dialog.services = services;
                 dialog.setInfo();
@@ -96,6 +98,7 @@ namespace StoreManagementApp
         {
             using (Employee dialog = new Employee())
             {
+                dialog.mode = 1;
                 dialog.Title = "Thêm nhân viên";
                 var storeList = new List<string>();
 
@@ -119,6 +122,7 @@ namespace StoreManagementApp
         {
             using (Employee dialog = new Employee())
             {
+                dialog.mode = 2;
                 dialog.Title = "Cập nhật nhân viên";
                 var storeList = new List<string>();
 
@@ -142,6 +146,7 @@ namespace StoreManagementApp
         {
             using (Item dialog = new Item())
             {
+                dialog.mode = 1;
                 dialog.Title = "Thêm sản phẩm";
                 var storeList = new List<string>();
 
@@ -165,6 +170,7 @@ namespace StoreManagementApp
         {
             using (Item dialog = new Item())
             {
+                dialog.mode = 2;
                 dialog.Title = "Cập nhật sản phẩm";
                 var storeList = new List<string>();
 
@@ -188,6 +194,7 @@ namespace StoreManagementApp
         {
             using (StoreItem dialog = new StoreItem())
             {
+                dialog.mode = 1;
                 dialog.Title = "Thêm sản phẩm";
                 var storeList = new List<string>();
                 dialog.setInfo();
@@ -209,6 +216,7 @@ namespace StoreManagementApp
         {
             using (StoreItem dialog = new StoreItem())
             {
+                dialog.mode = 2;
                 dialog.Title = "Cập nhật sản phẩm";
                 var storeList = new List<string>();
                 dialog.setInfo();
@@ -230,6 +238,7 @@ namespace StoreManagementApp
         {
             using (Customer dialog = new Customer())
             {
+                dialog.mode = 1;
                 dialog.Title = "Thêm khách hàng";
                 var storeList = new List<string>();
 
@@ -254,6 +263,7 @@ namespace StoreManagementApp
 
             using (Customer dialog = new Customer())
             {
+                dialog.mode = 2;
                 dialog.Title = "Cập nhật khách hàng";
                 var storeList = new List<string>();
 

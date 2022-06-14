@@ -7,6 +7,7 @@ namespace StoreManagementApp.Dialogs
 {
     public partial class Employee : Form
     {
+        public byte mode = 0; // Add = 1, Edit = 2
         public string Title = "";
         public string Store = "";
         public string EmployeeType = "";

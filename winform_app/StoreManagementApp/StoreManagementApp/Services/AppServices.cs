@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StoreManagementApp.Modals;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -105,69 +106,48 @@ namespace StoreManagementApp.Services
             return GetIdName("TBL_Employee", "StoreId", StoreId, "EmployeeID", "EmployeeName");
         }
 
-        public List<string> GetEmployeeTypes()
+        public int AddStore(StoreData data)
         {
-            var lstTypes = new List<string>();
-            lstTypes.Add("Admin - 1");
-            lstTypes.Add("Manager - 2");
-            lstTypes.Add("Employee - 3");
+            SqlCommand cmd = new SqlCommand("addStore", conn);
 
-            return lstTypes;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@StoreName", data.StoreName);
+            cmd.Parameters.AddWithValue("@PhoneNumber", data.PhoneNumber);
+            cmd.Parameters.AddWithValue("@Email", data.Email);
+            cmd.Parameters.AddWithValue("@ManagerID", data.Manager);
+            cmd.Parameters.AddWithValue("@RentalCost", data.RentalCost);
+            cmd.Parameters.AddWithValue("@OpenningDate", data.OpenningDate);
+            cmd.Parameters.AddWithValue("@ClosingDate", data.ClosingDate);
+            cmd.Parameters.AddWithValue("@Province", data.Province);
+            cmd.Parameters.AddWithValue("@District", data.District);
+            cmd.Parameters.AddWithValue("@Ward", data.Ward);
+            cmd.Parameters.AddWithValue("@Details", data.Details);
+
+            int rowAffected = cmd.ExecuteNonQuery();
+
+            return rowAffected;
         }
 
-        public List<string> GetGenders()
+        public static bool IsValidEmail(string email)
         {
-            var lstGenders = new List<string>();
-            lstGenders.Add("Nam - 1");
-            lstGenders.Add("Nữ - 2");
-            lstGenders.Add("Khác - 3");
+            var trimmedEmail = email.Trim();
 
-            return lstGenders;
-        }
-
-        public List<string> GetItemTypes()
-        {
-            var lstTypes = new List<string>();
-            lstTypes.Add("Đồ ăn - 1");
-            lstTypes.Add("Đồ uống - 2");
-            lstTypes.Add("Khác - 3");
-
-            return lstTypes;
-        }
-
-        public List<string> GetProvinces()
-        {
-            var lstProvinces = new List<string>();
-            lstProvinces.Add("TP Hồ Chí Minh - 1");
-            lstProvinces.Add("Sài Gòn - 2");
-
-            return lstProvinces;
-        }
-
-        public List<string> GetDistricts(string province)
-        {
-            var lstDistricts = new List<string>();
-            lstDistricts.Add("District 1 - 1");
-            lstDistricts.Add("District 2 - 2");
-            lstDistricts.Add("District 3 - 3");
-            lstDistricts.Add("District 4 - 4");
-            lstDistricts.Add("District 5 - 5");
-
-            return lstDistricts;
-        }
-
-        public List<string> GetWards(string province)
-        {
-            var lstWards = new List<string>();
-            lstWards.Add("Ward 1 - 1");
-            lstWards.Add("Ward 2 - 2");
-            lstWards.Add("Ward 3 - 3");
-            lstWards.Add("Ward 4 - 4");
-            lstWards.Add("Ward 5 - 5");
-
-            return lstWards;
+            if (trimmedEmail.EndsWith("."))
+            {
+                return false; // suggested by @TK-421
+            }
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == trimmedEmail;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
+
     public class ControlGroup
     {
         public ControlGroup()

@@ -7,6 +7,7 @@ namespace StoreManagementApp.Dialogs
 {
     public partial class Customer : Form
     {
+        public byte mode = 0; // Add = 1, Edit = 2
         public string Title = "";
         public List<ControlGroup> lstManagers = new List<ControlGroup>();
         public List<ControlGroup> lstProvinces = new List<ControlGroup>();

@@ -1,4 +1,5 @@
-﻿using StoreManagementApp.Services;
+﻿using StoreManagementApp.Modals;
+using StoreManagementApp.Services;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -7,20 +8,11 @@ namespace StoreManagementApp.Dialogs
 {
     public partial class Store : Form
     {
+        public byte mode = 0; // Add = 1, Edit = 2
         public string Title = "";
-        public string StoreName = "";
-        public string PhoneNumber = "";
-        public string Email = "";
-        public string Manager = "";
-        public string RentalCost = "";
-        public string OpenningDate = "";
-        public string ClosingDate = "";
-        public string Province = "";
-        public string District = "";
-        public string Ward = "";
-        public string Detail = "";
+        public StoreData data = new StoreData();
 
-        public List<ControlGroup> lstManagers = new List<ControlGroup>();
+        public List<IdName> lstManagers = new List<IdName>();
         public List<ControlGroup> lstProvinces = new List<ControlGroup>();
         public List<ControlGroup> lstDistricts = new List<ControlGroup>();
         public List<ControlGroup> lstWards = new List<ControlGroup>();
@@ -35,15 +27,23 @@ namespace StoreManagementApp.Dialogs
         public void setInfo()
         {
             lblTitle.Text = Title;
-            tbxStoreName.Text = StoreName;
-            tbxPhoneNumber.Text = PhoneNumber;
-            tbxRentalCost.Text = RentalCost;
+            tbxStoreName.Text = data.StoreName;
+            tbxPhoneNumber.Text = data.PhoneNumber;
+            tbxRentalCost.Text = data.RentalCost;
 
             lstProvinces = services.GetControls("Province");
+            lstManagers = services.GetEmployeeByStore("1");
 
-            foreach (var item in lstManagers)
+            if (mode == 2)
             {
-                //cbxManager.Items.Add(item);
+                foreach (var item in lstManagers)
+                {
+                    cbxManager.Items.Add(item.name + " - " + item.id);
+                }
+            }
+            else
+            {
+                cbxManager.Enabled = false;
             }
             foreach (var item in lstProvinces)
             {
@@ -81,31 +81,36 @@ namespace StoreManagementApp.Dialogs
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            StoreName = tbxStoreName.Text;
-            PhoneNumber = tbxPhoneNumber.Text;
-            Email = tbxEmail.Text;
-            Manager = cbxManager.Text;
-            RentalCost = tbxRentalCost.Text;
-            OpenningDate = dtpOpenningDate.Text;
-            ClosingDate = dtpClosingDate.Text;
-            Province = string.IsNullOrEmpty(cbxProvince.Text) ? string.Empty : cbxProvince.Text.Replace(" - ","-").Split('-')[1];
-            District = string.IsNullOrEmpty(cbxDistrict.Text) ? string.Empty : cbxDistrict.Text.Replace(" - ", "-").Split('-')[1];
-            Ward = string.IsNullOrEmpty(cbxWard.Text) ? string.Empty : cbxWard.Text.Replace(" - ", "-").Split('-')[1];
-            Detail = tbxDetails.Text;
+            data.StoreName = string.IsNullOrEmpty(tbxStoreName.Text) ? null : tbxStoreName.Text;
+            data.PhoneNumber = string.IsNullOrEmpty(tbxPhoneNumber.Text) ? null : tbxPhoneNumber.Text;
+            data.Email = string.IsNullOrEmpty(tbxEmail.Text) ? null : tbxEmail.Text;
+            data.Manager = string.IsNullOrEmpty(cbxManager.Text) ? "0" : cbxManager.Text;
+            data.RentalCost = string.IsNullOrEmpty(tbxRentalCost.Text) ? null : tbxRentalCost.Text;
+            data.OpenningDate = string.IsNullOrEmpty(dtpOpenningDate.Text) ? null : dtpOpenningDate.Text;
+            data.ClosingDate = string.IsNullOrEmpty(dtpClosingDate.Text) ? null : dtpClosingDate.Text;
+            data.Province = string.IsNullOrEmpty(cbxProvince.Text) ? string.Empty : cbxProvince.Text.Replace(" - ","-").Split('-')[1];
+            data.District = string.IsNullOrEmpty(cbxDistrict.Text) ? string.Empty : cbxDistrict.Text.Replace(" - ", "-").Split('-')[1];
+            data.Ward = string.IsNullOrEmpty(cbxWard.Text) ? string.Empty : cbxWard.Text.Replace(" - ", "-").Split('-')[1];
+            data.Details = string.IsNullOrEmpty(tbxDetails.Text) ? null : tbxDetails.Text;
 
-            MessageBox.Show(StoreName + "\n" +
-                "PhoneNumber: " + PhoneNumber + "\n" +
-                "Email: " + Email + "\n" +
-                "Manager: " + Manager + "\n" +
-                "RentalCost: " + RentalCost + "\n" +
-                "OpenningDate: " + OpenningDate + "\n" +
-                "ClosingDate: " + ClosingDate + "\n" +
-                "Province: " + Province + "\n" +
-                "District: " + District + "\n" +
-                "Ward: " + Ward + "\n" +
-                "Detail: " + Detail + "\n" +
-                ""
-                );
+            //MessageBox.Show(
+            //    "StoreName: <" + data.StoreName + ">\n" +
+            //    "PhoneNumber: <" + data.PhoneNumber + ">\n" +
+            //    "Email: <" + data.Email + ">\n" +
+            //    "Manager: <" + data.Manager + ">\n" +
+            //    "RentalCost: <" + data.RentalCost + ">\n" +
+            //    "OpenningDate: <" + data.OpenningDate + ">\n" +
+            //    "ClosingDate: <" + data.ClosingDate + ">\n" +
+            //    "Province: <" + data.Province + ">\n" +
+            //    "District: <" + data.District + ">\n" +
+            //    "Ward: <" + data.Ward + ">\n" +
+            //    "Detail: <" + data.Details + ">\n" +
+            //    ""
+            //    );
+
+            int rowAffected = services.AddStore(data);
+
+            MessageBox.Show(rowAffected + "....");
 
             this.DialogResult = DialogResult.OK;
         }

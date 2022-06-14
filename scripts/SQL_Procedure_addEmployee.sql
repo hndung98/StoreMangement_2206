@@ -1,9 +1,10 @@
-ALTER PROCEDURE [dbo].[addEmployee](
+CREATE OR ALTER PROCEDURE [dbo].[addEmployee](
 @StoreId AS int,
 @EmployeeName AS nvarchar(50),
 @Birthday AS date,
 @Gender AS tinyint,
 @PhoneNumber AS int,
+@Email as nvarchar(50),
 @StartingDate AS date,
 @WorkingStatus AS tinyint,
 @Salary AS decimal(12),
@@ -58,6 +59,25 @@ BEGIN
 			SET @allow = 0
 			print 'Phone number already exists.'
 		END	  
+		ELSE IF @Email is not null
+		BEGIN
+			IF @Email LIKE '%@%.%'
+				AND CHARINDEX(' ',@Email) = 0
+				AND CHARINDEX('.@',@Email) = 0
+				AND CHARINDEX(',',@Email) = 0
+				AND CHARINDEX('..',@Email) = 0
+				AND @Email NOT LIKE '%@%@%'
+				AND @Email in (SELECT Email FROM TBL_Employee)
+			BEGIN
+				SET @allow = 0
+				print 'Email already exists.'
+			END
+			ELSE
+			BEGIN
+				SET @allow = 0
+				print 'Email is invalid.'
+			END
+		END	  
 		ELSE IF @Username in (SELECT Username FROM TBL_Employee)
 		BEGIN
 			SET @allow = 0
@@ -99,6 +119,7 @@ BEGIN
 			@Birthday,
 			@Gender,
 			@PhoneNumber,
+			@Email,
 			@StartingDate,
 			@WorkingStatus,
 			@Salary,
@@ -110,19 +131,20 @@ BEGIN
 			@Details
 		)
 	END
-END--EXECUTE @RC = [dbo].[addEmployee] 
---   1
---  , N'Bruno Guimares'
---  , '2000-03-15'
---  , 1
---  , 0362514578
---  , '2022-06-03'
---  , 1
---  , 24000
---  , 'bruno3'
---  , '123'
---  , 1
---  , 1
---  , 3
---  , null
---GO
+END/*EXECUTE [dbo].[addEmployee] 
+   1
+  , N'Bruno Guimares'
+  , '2000-03-15'
+  , 1
+  , 0362544578
+  , 'hd@gmail'
+  , '2022-06-03'
+  , 1
+  , 24000
+  , 'bruno3'
+  , '123'
+  , 1
+  , 1
+  , 3
+  , null
+GO*/

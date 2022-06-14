@@ -12,6 +12,7 @@ namespace StoreManagementApp.Dialogs
 {
     public partial class StoreItem : Form
     {
+        public byte mode = 0; // Add = 1, Edit = 2
         public string Title = "";
 
         public StoreItem()
