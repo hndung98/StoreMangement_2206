@@ -1,4 +1,4 @@
-CREATE function [dbo].[SearchItemByName](@keyword nvarchar(50))
+CREATE OR ALTER function [dbo].[SearchItemByName](@keyword nvarchar(50))
 returns @returnTable table(
 	StoreId int,
 	StoreName nvarchar(50),

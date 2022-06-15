@@ -67,10 +67,12 @@ BEGIN
 				AND CHARINDEX(',',@Email) = 0
 				AND CHARINDEX('..',@Email) = 0
 				AND @Email NOT LIKE '%@%@%'
-				AND @Email in (SELECT Email FROM TBL_Employee)
 			BEGIN
-				SET @allow = 0
-				print 'Email already exists.'
+				IF @Email in (SELECT Email FROM TBL_Employee)
+				BEGIN
+					SET @allow = 0
+					print 'Email already exists.'
+				END
 			END
 			ELSE
 			BEGIN

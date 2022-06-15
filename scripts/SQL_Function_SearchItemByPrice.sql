@@ -1,4 +1,4 @@
-ALTER function [dbo].[SearchItemByPrice](@minPrice decimal(12), @maxPrice decimal(12))
+CREATE OR ALTER function [dbo].[SearchItemByPrice](@minPrice decimal(12), @maxPrice decimal(12))
 returns @returnTable table(
 	StoreId int,
 	StoreName nvarchar(50),
